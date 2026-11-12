@@ -1,0 +1,17 @@
+Dear {0},
+
+You are now registered user at Quivus Online Clinic
+
+You can access your online account at www.quivus.com.
+
+User name: {1}
+
+Password: {2}
+
+You can Download the Quivus Online Clinic Application under the download Section After logging in to your online account.
+
+If you have any questions about your registration with Quivus Online Clinic , you are welcome to contact our customer support [support@quivus.com].
+
+This is an auto-generated email, please do not reply.
+
+This message may contain confidential and/or privileged information. If you are not the addressee or authorized to receive this for the addressee, you must not use, copy, disclose or take any action based on this message or any information herein. If you have received this message in error, please advise the sender immediately by reply e-mail and delete this message. Thank you for your cooperation.

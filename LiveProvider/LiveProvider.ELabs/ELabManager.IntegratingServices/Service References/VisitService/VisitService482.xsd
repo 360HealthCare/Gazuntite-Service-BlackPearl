@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.PMH.ComprehensiveHistory.FamilyHistory" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.PMH.ComprehensiveHistory.FamilyHistory" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ArrayOfFamilyHistoryTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FamilyHistoryTypeDTO" nillable="true" type="tns:FamilyHistoryTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFamilyHistoryTypeDTO" nillable="true" type="tns:ArrayOfFamilyHistoryTypeDTO" />
+  <xs:complexType name="FamilyHistoryTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FamilyHistoryTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="FamilyHistoryTypeName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FamilyHistoryTypeDTO" nillable="true" type="tns:FamilyHistoryTypeDTO" />
+</xs:schema>

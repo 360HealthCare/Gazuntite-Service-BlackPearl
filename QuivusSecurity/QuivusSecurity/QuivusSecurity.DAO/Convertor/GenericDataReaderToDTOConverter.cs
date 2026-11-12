@@ -1,0 +1,107 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using QuivusSecurity.Logger.Logger;
+using System.Reflection;
+using System.Data;
+using QuivusSecurity.DAO.CustomException;
+using QuivusSecurity.DAO.Constant;
+
+namespace QuivusSecurity.DAO.Convertor
+{
+    public class GenericDataReaderToDTOConverter
+    {
+        public static void ConvertToDTO<T>(ref T destObject, IDataReader objReader)
+        {
+            String emptyString = string.Empty;
+
+            PropertyInfo[] propertyInfos;
+            propertyInfos = destObject.GetType().GetProperties();
+
+            try
+            {
+                foreach (PropertyInfo currentProperty in propertyInfos)
+                {
+                    if (currentProperty.PropertyType.IsClass && !currentProperty.PropertyType.IsInstanceOfType(emptyString))
+                    {
+                        
+                    }
+                    else
+                    {
+                        object readData = null;
+
+                        try
+                        {
+                            readData = objReader[currentProperty.Name];
+                        }
+                        catch (Exception exp)
+                        {
+                            QuivusLogger.Error(exp + ". Just log this exception as this property not found in DB.");
+                        }
+
+                        if (readData != DBNull.Value && readData != null)
+                        {
+                            currentProperty.SetValue(destObject, readData, null);
+                        }
+                    }
+                }
+            }
+            catch (Exception exp)
+            {
+                QuivusLogger.Error(exp);
+                throw new DTOConversionException(DAOConstant.GENERIC_DTO_CONVERSION_ERROR_MSG + ".ConvertToDTO", DAOConstant.ERROR_CODE.GenericDTOConversion.ToString());
+            }
+        }
+
+
+        public static void ConvertToDTOList<T>(List<T> destObjectList, IDataReader objIReader, Type destType)
+        {
+            String emptyString = string.Empty;
+
+            PropertyInfo[] propertyInfos;
+            propertyInfos = destType.GetProperties(); // Load Properties Of Class 
+
+            try
+            {
+                while (objIReader.Read())
+                {
+                    T destObject = (T)Activator.CreateInstance(destType);
+
+                    foreach (PropertyInfo currentProperty in propertyInfos)
+                    {
+                        if (currentProperty.PropertyType.IsClass && !currentProperty.PropertyType.IsInstanceOfType(emptyString))
+                        {
+                            
+                        }
+                        else
+                        {
+                            object readData = null;
+
+                            try
+                            {
+                                readData = objIReader[currentProperty.Name];
+                            }
+                            catch (Exception exp)
+                            {
+                                QuivusLogger.Error(exp + ". Just log this exception as this property not found in DB.");
+                            }
+
+                            if (readData != DBNull.Value && readData != null)
+                            {
+                                currentProperty.SetValue(destObject, readData, null);
+                            }
+                        }
+                    }
+
+                    destObjectList.Add(destObject);
+                }
+            }
+            catch (Exception exp)
+            {
+                QuivusLogger.Error(exp);
+                throw new DTOConversionException(DAOConstant.GENERIC_DTO_CONVERSION_ERROR_MSG + ".ConvertToDTOList", DAOConstant.ERROR_CODE.GenericDTOConversion.ToString());
+            }
+        }
+    }
+}

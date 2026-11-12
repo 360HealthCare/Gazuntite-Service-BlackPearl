@@ -1,0 +1,13 @@
+﻿Dear Customer,
+
+This is auto generated error email message. Uploading of files failed due to, {0} on {1} at {2}
+
+Total Patients Scanned : {3}
+
+Total Patients Uploaded : {4}
+
+Total Documents Uploaded : {5}
+
+For more details you can check log on this path : {6}
+
+This message may contain confidential and/or privileged information. If you are not the addressee or authorized to receive this for the addressee, you must not use, copy, disclose or take any action based on this message or any information herein. If you have received this message in error, please advise the sender immediately by reply e-mail and delete this message. Thank you for your cooperation.

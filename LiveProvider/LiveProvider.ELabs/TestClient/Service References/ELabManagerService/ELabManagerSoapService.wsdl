@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ELabManagerSoapService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1082/Service/ELabSoapService/ELabManagerSoapService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1082/Service/ELabSoapService/ELabManagerSoapService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" />
+      <xsd:import schemaLocation="http://localhost:1082/Service/ELabSoapService/ELabManagerSoapService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1082/Service/ELabSoapService/ELabManagerSoapService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LiveProvider.Model.TypeDTOs.ELabs.QuickInput" />
+      <xsd:import schemaLocation="http://localhost:1082/Service/ELabSoapService/ELabManagerSoapService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/LiveProvider.Model.TypeDTOs" />
+      <xsd:import schemaLocation="http://localhost:1082/Service/ELabSoapService/ELabManagerSoapService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/LiveProvider.Model.QuickInput" />
+      <xsd:import schemaLocation="http://localhost:1082/Service/ELabSoapService/ELabManagerSoapService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/LiveProvider.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IELabManagerSoapService_LoadLabNatureTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabNatureTypes" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabNatureTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabNatureTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabNatureTypes_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q1:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestPriorityTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabTestPriorityTypes" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestPriorityTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabTestPriorityTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestPriorityTypes_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q2:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestSpecimenTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabTestSpecimenTypes" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestSpecimenTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabTestSpecimenTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestSpecimenTypes_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q3:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabTestTypes" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabTestTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestTypes_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q4:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabTypes" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTypes_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q5:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestOrderMethodTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabTestOrderMethodTypes" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestOrderMethodTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLabTestOrderMethodTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLabTestOrderMethodTypes_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q6:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadICDCodeByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadICDCodeByName" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadICDCodeByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadICDCodeByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadICDCodeByName_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q7:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLIONICLabTestType_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLIONICLabTestType" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLIONICLabTestType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadLIONICLabTestTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_LoadLIONICLabTestType_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q8:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_ManagePatientLabs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePatientLabs" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_ManagePatientLabs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePatientLabsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IELabManagerSoapService_ManagePatientLabs_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q9:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:portType name="IELabManagerSoapService">
+    <wsdl:operation name="LoadLabNatureTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabNatureTypes" message="tns:IELabManagerSoapService_LoadLabNatureTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabNatureTypesResponse" message="tns:IELabManagerSoapService_LoadLabNatureTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabNatureTypesLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IELabManagerSoapService_LoadLabNatureTypes_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadLabTestPriorityTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestPriorityTypes" message="tns:IELabManagerSoapService_LoadLabTestPriorityTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestPriorityTypesResponse" message="tns:IELabManagerSoapService_LoadLabTestPriorityTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestPriorityTypesLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IELabManagerSoapService_LoadLabTestPriorityTypes_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadLabTestSpecimenTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestSpecimenTypes" message="tns:IELabManagerSoapService_LoadLabTestSpecimenTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestSpecimenTypesResponse" message="tns:IELabManagerSoapService_LoadLabTestSpecimenTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestSpecimenTypesLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IELabManagerSoapService_LoadLabTestSpecimenTypes_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadLabTestTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestTypes" message="tns:IELabManagerSoapService_LoadLabTestTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestTypesResponse" message="tns:IELabManagerSoapService_LoadLabTestTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestTypesLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IELabManagerSoapService_LoadLabTestTypes_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadLabTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTypes" message="tns:IELabManagerSoapService_LoadLabTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTypesResponse" message="tns:IELabManagerSoapService_LoadLabTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTypesLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IELabManagerSoapService_LoadLabTypes_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadLabTestOrderMethodTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestOrderMethodTypes" message="tns:IELabManagerSoapService_LoadLabTestOrderMethodTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestOrderMethodTypesResponse" message="tns:IELabManagerSoapService_LoadLabTestOrderMethodTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLabTestOrderMethodTypesLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IELabManagerSoapService_LoadLabTestOrderMethodTypes_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadICDCodeByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadICDCodeByName" message="tns:IELabManagerSoapService_LoadICDCodeByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadICDCodeByNameResponse" message="tns:IELabManagerSoapService_LoadICDCodeByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadICDCodeByNameLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IELabManagerSoapService_LoadICDCodeByName_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadLIONICLabTestType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLIONICLabTestType" message="tns:IELabManagerSoapService_LoadLIONICLabTestType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLIONICLabTestTypeResponse" message="tns:IELabManagerSoapService_LoadLIONICLabTestType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IELabManagerSoapService/LoadLIONICLabTestTypeLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IELabManagerSoapService_LoadLIONICLabTestType_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManagePatientLabs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IELabManagerSoapService/ManagePatientLabs" message="tns:IELabManagerSoapService_ManagePatientLabs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IELabManagerSoapService/ManagePatientLabsResponse" message="tns:IELabManagerSoapService_ManagePatientLabs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IELabManagerSoapService/ManagePatientLabsLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IELabManagerSoapService_ManagePatientLabs_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IELabManagerSoapService" type="tns:IELabManagerSoapService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadLabNatureTypes">
+      <soap:operation soapAction="http://tempuri.org/IELabManagerSoapService/LoadLabNatureTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLabTestPriorityTypes">
+      <soap:operation soapAction="http://tempuri.org/IELabManagerSoapService/LoadLabTestPriorityTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLabTestSpecimenTypes">
+      <soap:operation soapAction="http://tempuri.org/IELabManagerSoapService/LoadLabTestSpecimenTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLabTestTypes">
+      <soap:operation soapAction="http://tempuri.org/IELabManagerSoapService/LoadLabTestTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLabTypes">
+      <soap:operation soapAction="http://tempuri.org/IELabManagerSoapService/LoadLabTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLabTestOrderMethodTypes">
+      <soap:operation soapAction="http://tempuri.org/IELabManagerSoapService/LoadLabTestOrderMethodTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadICDCodeByName">
+      <soap:operation soapAction="http://tempuri.org/IELabManagerSoapService/LoadICDCodeByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLIONICLabTestType">
+      <soap:operation soapAction="http://tempuri.org/IELabManagerSoapService/LoadLIONICLabTestType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ManagePatientLabs">
+      <soap:operation soapAction="http://tempuri.org/IELabManagerSoapService/ManagePatientLabs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ELabManagerSoapService">
+    <wsdl:port name="BasicHttpBinding_IELabManagerSoapService" binding="tns:BasicHttpBinding_IELabManagerSoapService">
+      <soap:address location="http://localhost:1082/Service/ELabSoapService/ELabManagerSoapService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

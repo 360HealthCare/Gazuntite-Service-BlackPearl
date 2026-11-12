@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.Assessment" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.Assessment" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Diagnosis" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.FollowUp" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Procedure" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Recommendation" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="AssessmentDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Diagnosis" minOccurs="0" name="Diagnosis" nillable="true" type="q2:ArrayOfPatientDiagnosisDTO" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.FollowUp" minOccurs="0" name="PatientFollowUp" nillable="true" type="q3:PatientFollowUpDTO" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.FollowUp" minOccurs="0" name="PatientFollowupInstruction" nillable="true" type="q4:ArrayOfPatientFollowupInstructionDTO" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Procedure" minOccurs="0" name="Procedure" nillable="true" type="q5:ArrayOfProcedureDTO" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Recommendation" minOccurs="0" name="Recommendation" nillable="true" type="q6:ArrayOfPatientRecommendationDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AssessmentDTO" nillable="true" type="tns:AssessmentDTO" />
+</xs:schema>

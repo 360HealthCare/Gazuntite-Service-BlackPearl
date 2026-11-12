@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82735E6B-A2F3-4C7E-85B4-EBB29B8D60DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocumentManager.Business</RootNamespace>
+    <AssemblyName>DocumentManager.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ThirdPartyLibraries\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ThirdPartyLibraries\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ThirdPartyLibraries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ThirdPartyLibraries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ThirdPartyLibraries\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ThirdPartyLibraries\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ThirdPartyLibraries\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ThirdPartyLibraries\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\DocumentManager\IDocumentManager.cs" />
+    <Compile Include="BL\DocumentManager\Impl\DocumentManagerImpl.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\UserManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VisitService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Validators\DocumentManagementBaseValidator.cs" />
+    <Compile Include="Validators\DocumentManagementInputValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\LiveProvider.Model\LiveProvider.Model.csproj">
+      <Project>{ABA59947-D892-43D0-9E5F-DB53C67F0659}</Project>
+      <Name>LiveProvider.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\LiveProvider.Utility\LiveProvider.Utility.csproj">
+      <Project>{D2E1849D-704B-4449-96E0-1AC31AC3FC0C}</Project>
+      <Name>LiveProvider.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DocumentManager.DataAccess\DocumentManager.DataAccess.csproj">
+      <Project>{51D2F395-0EE5-4A7A-9754-996AE8101346}</Project>
+      <Name>DocumentManager.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Arrays1.xsd" />
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.AllergySearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.BaseUserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.ContactSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.ExternalPatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.ICDCodeSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.ImageTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.LoginDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.ModuleTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientAllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientBasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientProfileAllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientProfileChronicMedicationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientProfileCompleteSettingDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientProfileDiagnosisDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientProfileDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientProfileImmuniztionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientProfileInsuranceDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientProfileTaggedDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.PatientUserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.ProfileStaticDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.ProviderDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.QuickLinkDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.RecentPatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.RegisterationStaticDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.SearchEngineDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.UserBasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.UserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\DocumentManager.Business.UserManagerService.UserVerificationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.AddressBook1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.Clinic1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.Common1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.Image1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.Insurance1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.PatientProfileCustomization1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.QuickLink1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.RecentPatient1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.Search1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.SearchEngine1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.TypeDTOs1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.User.Patient1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model.User1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Model1.xsd" />
+    <None Include="Service References\UserManagerService\Quivus.Utility.Fault1.xsd" />
+    <None Include="Service References\UserManagerService\QuivusModel.Common1.xsd" />
+    <None Include="Service References\UserManagerService\QuivusModel.User.Patient1.xsd" />
+    <None Include="Service References\UserManagerService\QuivusModel.User1.xsd" />
+    <None Include="Service References\UserManagerService\service1.wsdl" />
+    <None Include="Service References\UserManagerService\service2.xsd" />
+    <None Include="Service References\UserManagerService\service21.xsd" />
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.AllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.CPTMedicalTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.DiseaseTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.DurationTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.EncounterTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.FamilyHistoryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.FamilyHistoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.FollowupDataControlTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.FollowupLabsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.FollowUpMethodTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.HPITypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.HPI_CCDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ICDCodeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ImmunizationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ImmunizationTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.InHouseLabDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.InHouseLabTestTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.InstructionAgeTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.InstructionAgeValueTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.InstructionDurationTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.LabDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.LabNatureTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.LabTestOrderMethodTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.LabTestPriorityTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.LabTestSpecimenTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.LabTestTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.LabTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.LIONICLabTestTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.MedicalHistoryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.MedicalHistoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.MedicationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.MedicationPrescribedDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.MethodTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ModuleDictationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ModuleNoteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ModuleTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PatientDiagnosisDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PatientEncounterResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PatientFollowUpDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PatientFollowupInstructionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PatientLastSeenDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PatientRecommendationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PhysicalCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PhysicalLevel3CategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PhysicalMainCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PhysicalsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PhysicalSubCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PlanTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PrescriptionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.PrescriptionMedicationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ProcedureDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.QuickInputDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.RecentVitalDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ROSDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ROSMainCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ROSSubCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ROSSubLevelCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.ServiceTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.SoapTemplateTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.SocialHistoryAddictionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.SocialHistoryAddictionTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.SocialHistoryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.SocialHistoryMediumTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.SocialHistoryUsageAmountTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.SocialhistoryVBDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.SocialMaritalStatusTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.VisistStakeHolderDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.VisitDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.VitalDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\DocumentManager.Business.VisitService.VitalTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\VisitService1.wsdl" />
+    <None Include="Service References\VisitService\VisitService47.xsd" />
+    <None Include="Service References\VisitService\VisitService471.xsd" />
+    <None Include="Service References\VisitService\VisitService4710.xsd" />
+    <None Include="Service References\VisitService\VisitService4711.xsd" />
+    <None Include="Service References\VisitService\VisitService4712.xsd" />
+    <None Include="Service References\VisitService\VisitService4713.xsd" />
+    <None Include="Service References\VisitService\VisitService4714.xsd" />
+    <None Include="Service References\VisitService\VisitService4715.xsd" />
+    <None Include="Service References\VisitService\VisitService4716.xsd" />
+    <None Include="Service References\VisitService\VisitService4717.xsd" />
+    <None Include="Service References\VisitService\VisitService4718.xsd" />
+    <None Include="Service References\VisitService\VisitService4719.xsd" />
+    <None Include="Service References\VisitService\VisitService472.xsd" />
+    <None Include="Service References\VisitService\VisitService4720.xsd" />
+    <None Include="Service References\VisitService\VisitService4721.xsd" />
+    <None Include="Service References\VisitService\VisitService4722.xsd" />
+    <None Include="Service References\VisitService\VisitService4723.xsd" />
+    <None Include="Service References\VisitService\VisitService4724.xsd" />
+    <None Include="Service References\VisitService\VisitService4725.xsd" />
+    <None Include="Service References\VisitService\VisitService4726.xsd" />
+    <None Include="Service References\VisitService\VisitService4727.xsd" />
+    <None Include="Service References\VisitService\VisitService4728.xsd" />
+    <None Include="Service References\VisitService\VisitService4729.xsd" />
+    <None Include="Service References\VisitService\VisitService473.xsd" />
+    <None Include="Service References\VisitService\VisitService4730.xsd" />
+    <None Include="Service References\VisitService\VisitService4731.xsd" />
+    <None Include="Service References\VisitService\VisitService4732.xsd" />
+    <None Include="Service References\VisitService\VisitService4733.xsd" />
+    <None Include="Service References\VisitService\VisitService4734.xsd" />
+    <None Include="Service References\VisitService\VisitService4735.xsd" />
+    <None Include="Service References\VisitService\VisitService4736.xsd" />
+    <None Include="Service References\VisitService\VisitService4737.xsd" />
+    <None Include="Service References\VisitService\VisitService4738.xsd" />
+    <None Include="Service References\VisitService\VisitService4739.xsd" />
+    <None Include="Service References\VisitService\VisitService474.xsd" />
+    <None Include="Service References\VisitService\VisitService4740.xsd" />
+    <None Include="Service References\VisitService\VisitService4741.xsd" />
+    <None Include="Service References\VisitService\VisitService4742.xsd" />
+    <None Include="Service References\VisitService\VisitService4743.xsd" />
+    <None Include="Service References\VisitService\VisitService4744.xsd" />
+    <None Include="Service References\VisitService\VisitService4745.xsd" />
+    <None Include="Service References\VisitService\VisitService4746.xsd" />
+    <None Include="Service References\VisitService\VisitService475.xsd" />
+    <None Include="Service References\VisitService\VisitService476.xsd" />
+    <None Include="Service References\VisitService\VisitService477.xsd" />
+    <None Include="Service References\VisitService\VisitService478.xsd" />
+    <None Include="Service References\VisitService\VisitService479.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\UserManagerService\" />
+    <WCFMetadataStorage Include="Service References\VisitService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\VisitService1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

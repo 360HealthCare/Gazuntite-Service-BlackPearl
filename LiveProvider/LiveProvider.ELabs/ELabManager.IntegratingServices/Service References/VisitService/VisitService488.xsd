@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.FollowUp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.FollowUp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="FollowUpMethodTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FollowUpMethodTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="MethodName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FollowUpMethodTypeDTO" nillable="true" type="tns:FollowUpMethodTypeDTO" />
+  <xs:complexType name="InstructionDurationTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q2:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DurationTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="DurationTypeName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InstructionDurationTypeDTO" nillable="true" type="tns:InstructionDurationTypeDTO" />
+  <xs:complexType name="InstructionAgeTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q3:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgeTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InstructionAgeTypeID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InstructionAgeTypeDTO" nillable="true" type="tns:InstructionAgeTypeDTO" />
+  <xs:complexType name="InstructionAgeValueTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgeValueTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstructionAgeValueTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InstructionAgeValueTypeDTO" nillable="true" type="tns:InstructionAgeValueTypeDTO" />
+  <xs:complexType name="ServiceTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q4:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClinicBranchId" type="xs:int" />
+          <xs:element minOccurs="0" name="FollowupService" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FollowupServiceTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="FollowupServiceTypeName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ServiceTypeDTO" nillable="true" type="tns:ServiceTypeDTO" />
+  <xs:complexType name="ArrayOfServiceTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceTypeDTO" nillable="true" type="tns:ServiceTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServiceTypeDTO" nillable="true" type="tns:ArrayOfServiceTypeDTO" />
+  <xs:complexType name="ArrayOfInstructionAgeTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InstructionAgeTypeDTO" nillable="true" type="tns:InstructionAgeTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstructionAgeTypeDTO" nillable="true" type="tns:ArrayOfInstructionAgeTypeDTO" />
+  <xs:complexType name="ArrayOfInstructionDurationTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InstructionDurationTypeDTO" nillable="true" type="tns:InstructionDurationTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstructionDurationTypeDTO" nillable="true" type="tns:ArrayOfInstructionDurationTypeDTO" />
+  <xs:complexType name="ArrayOfInstructionAgeValueTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InstructionAgeValueTypeDTO" nillable="true" type="tns:InstructionAgeValueTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstructionAgeValueTypeDTO" nillable="true" type="tns:ArrayOfInstructionAgeValueTypeDTO" />
+  <xs:complexType name="ArrayOfFollowUpMethodTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FollowUpMethodTypeDTO" nillable="true" type="tns:FollowUpMethodTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFollowUpMethodTypeDTO" nillable="true" type="tns:ArrayOfFollowUpMethodTypeDTO" />
+</xs:schema>

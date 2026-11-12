@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.FollowUp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.FollowUp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.FollowUp" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfPatientFollowUpDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientFollowUpDTO" nillable="true" type="tns:PatientFollowUpDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatientFollowUpDTO" nillable="true" type="tns:ArrayOfPatientFollowUpDTO" />
+  <xs:complexType name="PatientFollowUpDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DrugID" type="xs:int" />
+          <xs:element minOccurs="0" name="FollowUpDate" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.FollowUp" minOccurs="0" name="FollowUpMethodType" nillable="true" type="q2:FollowUpMethodTypeDTO" />
+          <xs:element minOccurs="0" name="IsByDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDrugselected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsInHouseLabTestSelected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsLabTestSelected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsOnCompletion" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsRecordEditable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LabTestID" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientFollowUpID" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientID" type="xs:int" />
+          <xs:element minOccurs="0" name="VisitDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VisitID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientFollowUpDTO" nillable="true" type="tns:PatientFollowUpDTO" />
+  <xs:complexType name="ArrayOfPatientFollowupInstructionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientFollowupInstructionDTO" nillable="true" type="tns:PatientFollowupInstructionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatientFollowupInstructionDTO" nillable="true" type="tns:ArrayOfPatientFollowupInstructionDTO" />
+  <xs:complexType name="PatientFollowupInstructionDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q3:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AfterDurationValue" type="xs:int" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.FollowUp" minOccurs="0" name="AfterInstructionDurationTypeDTO" nillable="true" type="q4:InstructionDurationTypeDTO" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.FollowUp" minOccurs="0" name="AgeTypeDTO" nillable="true" type="q5:InstructionAgeTypeDTO" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.FollowUp" minOccurs="0" name="AgeValueTypeDTO" nillable="true" type="q6:InstructionAgeValueTypeDTO" />
+          <xs:element minOccurs="0" name="ClinicBranchId" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DictationID" type="ser:guid" />
+          <xs:element minOccurs="0" name="FollowupInstructionID" type="xs:int" />
+          <xs:element minOccurs="0" name="ForDurationValue" type="xs:int" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.FollowUp" minOccurs="0" name="ForInstructionDurationTypeDTO" nillable="true" type="q7:InstructionDurationTypeDTO" />
+          <xs:element minOccurs="0" name="IsAgeSelected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDurationSelected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsRecordEditable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModifiedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="NoteSubject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientID" type="xs:int" />
+          <xs:element minOccurs="0" name="VisitDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VisitID" type="xs:int" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.FollowUp" minOccurs="0" name="objServiceTypeDTO" nillable="true" type="q8:ServiceTypeDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientFollowupInstructionDTO" nillable="true" type="tns:PatientFollowupInstructionDTO" />
+  <xs:complexType name="ArrayOfFollowupLabsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FollowupLabsDTO" nillable="true" type="tns:FollowupLabsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFollowupLabsDTO" nillable="true" type="tns:ArrayOfFollowupLabsDTO" />
+  <xs:complexType name="FollowupLabsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsInHouseLab" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRecordEditable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LabTestDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientFollowUpLabID" type="xs:int" />
+      <xs:element minOccurs="0" name="TestCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FollowupLabsDTO" nillable="true" type="tns:FollowupLabsDTO" />
+</xs:schema>

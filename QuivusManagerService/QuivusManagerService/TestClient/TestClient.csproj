@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17E7280A-686A-4859-8FF6-DF3D6E02EBE3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestClient</RootNamespace>
+    <AssemblyName>TestClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\prescriptionServTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\QuivusManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\prescriptionServTest\EprescriptionAdapterService.wsdl" />
+    <None Include="Service References\prescriptionServTest\EprescriptionAdapterService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\prescriptionServTest\EprescriptionAdapterService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\prescriptionServTest\EprescriptionAdapterService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\prescriptionServTest\TestClient.prescriptionServTest.PatientAllergiesInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\prescriptionServTest\TestClient.prescriptionServTest.PatientMedicationsInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\prescriptionServTest\TestClient.prescriptionServTest.PrescriptionInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\prescriptionServTest\TestClient.prescriptionServTest.ProblemsInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService.wsdl" />
+    <None Include="Service References\QuivusManagerService\QuivusManagerService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService26.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService27.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService28.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService29.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService30.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService34.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService35.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService36.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService37.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService38.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService39.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService40.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService44.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService45.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService46.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService47.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService48.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService49.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService50.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService55.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService56.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService57.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService58.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService59.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService60.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService61.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService62.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService63.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService64.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService65.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService66.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService67.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService68.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService69.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService70.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService71.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService72.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService73.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService74.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService75.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService76.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService77.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService78.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService79.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService80.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService81.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService82.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService83.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService84.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService85.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService86.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService87.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.AddressBookAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.AddressBookPhoneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.AddressBookStaticDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.AllergyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.AllergyTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ANSWebURLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.BaseUserRegistrationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.BaseUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.CityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ContactSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.CPTMedicalTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.CreateVisitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.DiseaseTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.DurationTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.EmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.EncounterTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.FamilyHistoryTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.FollowupLabsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.FollowUpMethodTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.HPIDetailAutoCompleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.HPIDetailTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ICDCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ImageTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ImmunizationAutoCompleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ImmunizationSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ImmunizationTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.InHouseLabTestTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.InstructionAgeTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.InstructionAgeValueTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.InstructionDurationTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.LabNatureTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.LabTestOrderMethodTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.LabTestPriorityTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.LabTestSpecimenTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.LabTestTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.LabTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.LinksAutoCompleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.LIONICLabTestTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.LoginCallResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ManageVisitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.MedicalHistoryTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.MedicationPrescribedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.MethodTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ModuleTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientDiagnosisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientEmergencyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientEncountersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientFamilyHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientFollowupInstructionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientFollowUpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientHPIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientImmunizationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientInHouseLabResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientLabResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientMedicalHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientMedicationReponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientPhysicalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientPrescriptionMedicationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientPrescriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientProcedureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientProfileAllergyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientProfileChronicMedicationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientProfileDiagnosisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientProfileImmunizationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientProfileInfoResposne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientProfileInsuranceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientProfileSettingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientRecommendationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientROSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientVisitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PatientVitalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PhysicalMainCategoryTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PhysicalSubCategoryTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.PlanTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ProfileStaticDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.QuickInputResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.QuickLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.RecentPatientRespose.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.RegistrationStaticDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ROSMainCategoryTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ROSSubCategoryTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.SearchEngineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ServiceTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.SoapTemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.SocialHistoryAddictionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.SocialHistoryAddictionTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.SocialHistoryMediumTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.SocialHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.SocialHistoryUsageAmountTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.SocialMaritalStatusTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.UrlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.UserBasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.UserRegistrationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.UserSessionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.VisistStakeHolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.VisitNotesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QuivusManagerService\TestClient.QuivusManagerService.ZipCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\prescriptionServTest\" />
+    <WCFMetadataStorage Include="Service References\QuivusManagerService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\prescriptionServTest\EprescriptionAdapterService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\prescriptionServTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\prescriptionServTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\prescriptionServTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QuivusManagerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QuivusManagerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QuivusManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QuivusManagerService\QuivusManagerService.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

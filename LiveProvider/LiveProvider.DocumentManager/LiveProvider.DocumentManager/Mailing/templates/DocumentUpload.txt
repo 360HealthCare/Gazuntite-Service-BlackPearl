@@ -1,0 +1,13 @@
+﻿Dear Customer,
+
+This is auto generated confirmation email message, your selected folder (s) been uploaded successfully on server on {0} at {1}
+
+Total Patients Scanned : {2}
+
+Total Patients Uploaded : {3}
+
+Total Documents Uploaded : {4}
+
+For more details you can check log on this path : {5}
+
+This message may contain confidential and/or privileged information. If you are not the addressee or authorized to receive this for the addressee, you must not use, copy, disclose or take any action based on this message or any information herein. If you have received this message in error, please advise the sender immediately by reply e-mail and delete this message. Thank you for your cooperation.

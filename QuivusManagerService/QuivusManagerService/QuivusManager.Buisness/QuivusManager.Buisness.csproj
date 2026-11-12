@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5FB3E67-A7AA-400C-B4A2-989BD35DFCAD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuivusManager.Buisness</RootNamespace>
+    <AssemblyName>QuivusManager.Buisness</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressBookBL\IAddressBookBL.cs" />
+    <Compile Include="AddressBookBL\Impl\AddressBookBLImpl.cs" />
+    <Compile Include="ApplicationSession\ApplicationSessionHandler.cs" />
+    <Compile Include="ApplicationSession\QApplicationSession.cs" />
+    <Compile Include="E-PrescriptionBL\IEPrescriptionBL.cs" />
+    <Compile Include="E-PrescriptionBL\Impl\EPrescriptionBLImpl.cs" />
+    <Compile Include="ManagerBL\IManagerBL.cs" />
+    <Compile Include="ManagerBL\Impl\ManagerBLImpl.cs" />
+    <Compile Include="PatientBL\Impl\PatientBLImpl.cs" />
+    <Compile Include="PatientBL\IPatientBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceFactory\ServiceReferenceFactory.cs" />
+    <Compile Include="StaticDataBL\Impl\StaticDataBLImpl.cs" />
+    <Compile Include="StaticDataBL\IStaticDataBL.cs" />
+    <Compile Include="UserBL\Impl\UserBLImpl.cs" />
+    <Compile Include="UserBL\IUserBL.cs" />
+    <Compile Include="Utility\CloneAddressBook.cs" />
+    <Compile Include="Utility\CopyUtilities.cs" />
+    <Compile Include="Utility\QApplicationDataCache.cs" />
+    <Compile Include="Utility\QConfigurationManager.cs" />
+    <Compile Include="Utility\ResponseErrorHandler.cs" />
+    <Compile Include="VisitBL\QuickInput\Impl\QuickInputBLImpl.cs" />
+    <Compile Include="VisitBL\QuickInput\IQuickInputBL.cs" />
+    <Compile Include="VisitBL\ViewBackgorund\Impl\ViewBackgroundBLImpl.cs" />
+    <Compile Include="VisitBL\ViewBackgorund\IViewBackgroundBL.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Utility\QuivusUtility\QuivusUtility\QuivusUtility.csproj">
+      <Project>{52A05B07-376A-4756-A2CC-CCFC7A387226}</Project>
+      <Name>QuivusUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuivusManager.DAO\QuivusManager.DAO.csproj">
+      <Project>{151347E7-781F-4C80-891C-62FCA45D5E2D}</Project>
+      <Name>QuivusManager.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuivusManager.IntegratedServies\QuivusManager.IntegratedServices.csproj">
+      <Project>{93BDBE14-B85F-467B-BB08-E2D9181BAC23}</Project>
+      <Name>QuivusManager.IntegratedServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuivusManager.ServiceResponse\QuivusManager.ServiceResponse.csproj">
+      <Project>{7163AAAC-3813-48F1-9F2C-E9457FB1B998}</Project>
+      <Name>QuivusManager.ServiceResponse</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

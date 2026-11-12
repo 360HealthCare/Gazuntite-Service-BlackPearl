@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.SearchEngine" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.SearchEngine" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ArrayOfSearchEngineDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchEngineDTO" nillable="true" type="tns:SearchEngineDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchEngineDTO" nillable="true" type="tns:ArrayOfSearchEngineDTO" />
+  <xs:complexType name="SearchEngineDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPreferred" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSystemGenerated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SearchEngineTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="Thumbnail" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserSearchEngineID" type="xs:int" />
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="icon" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchEngineDTO" nillable="true" type="tns:SearchEngineDTO" />
+</xs:schema>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.RecentPatient" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.RecentPatient" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ArrayOfRecentPatientDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RecentPatientDTO" nillable="true" type="tns:RecentPatientDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecentPatientDTO" nillable="true" type="tns:ArrayOfRecentPatientDTO" />
+  <xs:complexType name="RecentPatientDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllowEmailCommunication" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClinicBranchId" type="xs:int" />
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="IsChatIdAvailable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsEmailIdAvailable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPhoneNoAvailable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSMSNoAvalable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSnailIdAvailable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastVisitDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientDOB" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="QuivusId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" type="xs:int" />
+          <xs:element minOccurs="0" name="UserRecentPatientId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RecentPatientDTO" nillable="true" type="tns:RecentPatientDTO" />
+</xs:schema>

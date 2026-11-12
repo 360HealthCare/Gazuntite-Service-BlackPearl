@@ -1,0 +1,41 @@
+﻿<RCExtResponse>
+  <Request>
+    <Caller>
+      <VendorName>qvendor1</VendorName>
+      <VendorPassword>accountqu9898</VendorPassword>
+      <PracticeName>Quivus</PracticeName>
+      <Application>Quivus</Application>
+      <Version>1</Version>
+      <Station>Station A</Station>
+    </Caller>
+    <RcopiaPracticeUsername>qu9898</RcopiaPracticeUsername>
+    <Request>
+      <Command>get_url</Command>
+    </Request>
+  </Request>
+  <Response>
+    <ServerIPAddress>anscert.drfirst.com:80</ServerIPAddress>
+    <Status>ok</Status>
+
+    <WebBrowserURL>https://cert.drfirst.com/sso/portalServices</WebBrowserURL>
+
+    <WinUploadURL>https://updatecert.drfirst.com/servlet/rcopia.servlet.WinServlet</WinUploadURL>
+    <WinDownloadURL>https://updatecert.drfirst.com/servlet/rcopia.servlet.WinServlet</WinDownloadURL>
+    <EngineUploadURL>https://updatecert.drfirst.com/servlet/rcopia.servlet.EngineServlet</EngineUploadURL>
+    <EngineDownloadURL>https://updatecert.drfirst.com/servlet/rcopia.servlet.EngineServlet</EngineDownloadURL>
+
+    <LinkUploadURL>https://updatecert.drfirst.com/servlet/rcopia.servlet.EngineServlet</LinkUploadURL>
+
+
+
+
+    <ACLinkUploadURL>https://cert.drfirst.com/aci/servlet/rcopia.ac.servlet.AcEngineServlet</ACLinkUploadURL>
+    <ACLinkDownloadURL>https://cert.drfirst.com/aci/servlet/rcopia.ac.servlet.AcEngineServlet</ACLinkDownloadURL>
+
+
+
+
+    <SphoneDownloadURL>https://spcert.drfirst.com/servlet/rcopia.servlet.WinServlet</SphoneDownloadURL>
+    <SphoneBrowserURL>https://cert.drfirst.com/servlet/rcopia.servlet.PDAServlet</SphoneBrowserURL>
+  </Response>
+</RCExtResponse>

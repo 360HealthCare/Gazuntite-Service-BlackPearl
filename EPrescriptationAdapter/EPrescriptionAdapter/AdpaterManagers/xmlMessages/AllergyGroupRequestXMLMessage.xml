@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RCExtRequest>
+  <Caller>
+    <VendorName></VendorName>
+    <VendorPassword></VendorPassword>
+    <Application></Application>
+    <Version></Version>
+    <PracticeName></PracticeName>
+    <Station></Station>
+  </Caller>
+  <SystemName></SystemName>
+  <RcopiaPracticeUsername></RcopiaPracticeUsername>
+  <Request>
+    <Command>update_allergy_group</Command>
+    <LastUpdateDate>10/01/2008 00:00:00</LastUpdateDate>
+  </Request>
+</RCExtRequest>

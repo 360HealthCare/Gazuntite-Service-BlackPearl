@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33423AAF-AA00-498E-8C01-780A6533B845}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuivusBilling.IntegratedServices</RootNamespace>
+    <AssemblyName>QuivusBilling.IntegratedServices</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\UserManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VisitService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.AllergySearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.BaseUserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ClinicDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ClinicProviderSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ClinicRoomDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ClinicUserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ContactSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ExternalPatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ICDCodeSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ImageTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.LoginDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ModuleTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientAllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientBasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientProfileAllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientProfileChronicMedicationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientProfileCompleteSettingDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientProfileDiagnosisDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientProfileDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientProfileImmuniztionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientProfileInsuranceDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientProfileTaggedDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientProviderAssociationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientQuivusIDDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.PatientUserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ProfileStaticDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ProviderDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.ProviderSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.QuickLinkDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.RecentPatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.RegisterationStaticDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.SearchEngineDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.SpecialityTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.StationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.SuperBillPatientInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.UserBasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.UserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.UserTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.UserVerificationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusBilling.IntegratedServices.UserManagerService.WorkingHourDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService.wsdl" />
+    <None Include="Service References\UserManagerService\UserManagerService.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService1.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService10.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService11.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService12.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService13.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService14.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService15.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService16.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService17.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService18.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService19.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService2.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService20.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService21.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService22.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService23.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService24.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService25.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService26.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService3.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService4.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService5.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService6.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService7.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService8.xsd" />
+    <None Include="Service References\UserManagerService\UserManagerService9.xsd" />
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.AllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.CPTMedicalTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.DiseaseTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.DurationTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.EncounterTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.FamilyHistoryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.FamilyHistoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.FollowupDataControlTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.FollowupLabsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.FollowUpMethodTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.HPITypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.HPI_CCDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ICDCodeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ImmunizationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ImmunizationTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.InHouseLabDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.InHouseLabTestTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.InstructionAgeTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.InstructionAgeValueTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.InstructionDurationTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.LabDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.LabNatureTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.LabTestOrderMethodTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.LabTestPriorityTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.LabTestSpecimenTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.LabTestTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.LabTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.LIONICLabTestTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.MedicalHistoryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.MedicalHistoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.MedicationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.MedicationPrescribedDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.MethodTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ModuleDictationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ModuleNoteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ModuleTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PatientDiagnosisDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PatientEncounterResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PatientFollowUpDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PatientFollowupInstructionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PatientLastSeenDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PatientProcedureModifierDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PatientRecommendationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PendingBillsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PhysicalCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PhysicalLevel3CategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PhysicalMainCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PhysicalsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PhysicalSubCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PlaceOfServiceTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PlanTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PrescriptionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.PrescriptionMedicationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ProcedureDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ProcedureModifierTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.QBProcedureDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.QBVisitDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.QuickInputDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.RecentVitalDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ROSDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ROSMainCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ROSSubCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ROSSubLevelCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.ServiceTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.SoapTemplateTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.SocialHistoryAddictionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.SocialHistoryAddictionTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.SocialHistoryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.SocialHistoryMediumTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.SocialHistoryUsageAmountTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.SocialhistoryVBDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.SocialMaritalStatusTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.SuperBillHEDLevelDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.VisistStakeHolderDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.VisitDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.VitalDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\QuivusBilling.IntegratedServices.VisitService.VitalTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\VisitService.wsdl" />
+    <None Include="Service References\VisitService\VisitService.xsd" />
+    <None Include="Service References\VisitService\VisitService1.xsd" />
+    <None Include="Service References\VisitService\VisitService10.xsd" />
+    <None Include="Service References\VisitService\VisitService11.xsd" />
+    <None Include="Service References\VisitService\VisitService12.xsd" />
+    <None Include="Service References\VisitService\VisitService13.xsd" />
+    <None Include="Service References\VisitService\VisitService14.xsd" />
+    <None Include="Service References\VisitService\VisitService15.xsd" />
+    <None Include="Service References\VisitService\VisitService16.xsd" />
+    <None Include="Service References\VisitService\VisitService17.xsd" />
+    <None Include="Service References\VisitService\VisitService18.xsd" />
+    <None Include="Service References\VisitService\VisitService19.xsd" />
+    <None Include="Service References\VisitService\VisitService2.xsd" />
+    <None Include="Service References\VisitService\VisitService20.xsd" />
+    <None Include="Service References\VisitService\VisitService21.xsd" />
+    <None Include="Service References\VisitService\VisitService22.xsd" />
+    <None Include="Service References\VisitService\VisitService23.xsd" />
+    <None Include="Service References\VisitService\VisitService24.xsd" />
+    <None Include="Service References\VisitService\VisitService25.xsd" />
+    <None Include="Service References\VisitService\VisitService26.xsd" />
+    <None Include="Service References\VisitService\VisitService27.xsd" />
+    <None Include="Service References\VisitService\VisitService28.xsd" />
+    <None Include="Service References\VisitService\VisitService29.xsd" />
+    <None Include="Service References\VisitService\VisitService3.xsd" />
+    <None Include="Service References\VisitService\VisitService30.xsd" />
+    <None Include="Service References\VisitService\VisitService31.xsd" />
+    <None Include="Service References\VisitService\VisitService32.xsd" />
+    <None Include="Service References\VisitService\VisitService33.xsd" />
+    <None Include="Service References\VisitService\VisitService34.xsd" />
+    <None Include="Service References\VisitService\VisitService35.xsd" />
+    <None Include="Service References\VisitService\VisitService36.xsd" />
+    <None Include="Service References\VisitService\VisitService37.xsd" />
+    <None Include="Service References\VisitService\VisitService38.xsd" />
+    <None Include="Service References\VisitService\VisitService39.xsd" />
+    <None Include="Service References\VisitService\VisitService4.xsd" />
+    <None Include="Service References\VisitService\VisitService40.xsd" />
+    <None Include="Service References\VisitService\VisitService41.xsd" />
+    <None Include="Service References\VisitService\VisitService42.xsd" />
+    <None Include="Service References\VisitService\VisitService43.xsd" />
+    <None Include="Service References\VisitService\VisitService44.xsd" />
+    <None Include="Service References\VisitService\VisitService45.xsd" />
+    <None Include="Service References\VisitService\VisitService46.xsd" />
+    <None Include="Service References\VisitService\VisitService47.xsd" />
+    <None Include="Service References\VisitService\VisitService48.xsd" />
+    <None Include="Service References\VisitService\VisitService481.xsd" />
+    <None Include="Service References\VisitService\VisitService49.xsd" />
+    <None Include="Service References\VisitService\VisitService5.xsd" />
+    <None Include="Service References\VisitService\VisitService6.xsd" />
+    <None Include="Service References\VisitService\VisitService7.xsd" />
+    <None Include="Service References\VisitService\VisitService8.xsd" />
+    <None Include="Service References\VisitService\VisitService9.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\UserManagerService\" />
+    <WCFMetadataStorage Include="Service References\VisitService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\VisitService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>True</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

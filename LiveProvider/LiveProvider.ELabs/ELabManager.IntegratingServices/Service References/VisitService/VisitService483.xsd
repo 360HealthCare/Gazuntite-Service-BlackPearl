@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/QuivusModel.TypeDTOs.QuickInputTypeDTOs.Physical.Physicals" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/QuivusModel.TypeDTOs.QuickInputTypeDTOs.Physical.Physicals" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ArrayOfPhysicalLevel3CategoryTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalLevel3CategoryTypeDTO" nillable="true" type="tns:PhysicalLevel3CategoryTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalLevel3CategoryTypeDTO" nillable="true" type="tns:ArrayOfPhysicalLevel3CategoryTypeDTO" />
+  <xs:complexType name="PhysicalLevel3CategoryTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsFemaleApplicable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsMaleApplicable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PhysicalSubCategoryTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalSubLevel3CategoryTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubLevel3CategoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UIIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalLevel3CategoryTypeDTO" nillable="true" type="tns:PhysicalLevel3CategoryTypeDTO" />
+  <xs:complexType name="ArrayOfPhysicalCategoryTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalCategoryTypeDTO" nillable="true" type="tns:PhysicalCategoryTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalCategoryTypeDTO" nillable="true" type="tns:ArrayOfPhysicalCategoryTypeDTO" />
+  <xs:complexType name="PhysicalCategoryTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q2:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsFemaleApplicable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsMaleApplicable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ParentId" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalCategoryTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UIIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalCategoryTypeDTO" nillable="true" type="tns:PhysicalCategoryTypeDTO" />
+</xs:schema>

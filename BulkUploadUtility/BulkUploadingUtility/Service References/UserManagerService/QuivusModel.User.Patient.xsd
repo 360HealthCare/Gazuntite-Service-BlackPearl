@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/QuivusModel.User.Patient" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/QuivusModel.User.Patient" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="PatientBasicInfoDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuivusId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientBasicInfoDTO" nillable="true" type="tns:PatientBasicInfoDTO" />
+  <xs:complexType name="PatientUserInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q2:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PatientID" type="xs:int" />
+          <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientUserInfo" nillable="true" type="tns:PatientUserInfo" />
+  <xs:complexType name="ExternalPatientDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FirstRecord" type="xs:int" />
+      <xs:element minOccurs="0" name="LastRecord" type="xs:int" />
+      <xs:element minOccurs="0" name="PatientList" nillable="true" type="tns:ArrayOfExternalPatientInfoDTO" />
+      <xs:element minOccurs="0" name="TotalRecord" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExternalPatientDTO" nillable="true" type="tns:ExternalPatientDTO" />
+  <xs:complexType name="ArrayOfExternalPatientInfoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExternalPatientInfoDTO" nillable="true" type="tns:ExternalPatientInfoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExternalPatientInfoDTO" nillable="true" type="tns:ArrayOfExternalPatientInfoDTO" />
+  <xs:complexType name="ExternalPatientInfoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GenderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+      <xs:element minOccurs="0" name="RecGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExternalPatientInfoDTO" nillable="true" type="tns:ExternalPatientInfoDTO" />
+  <xs:complexType name="ArrayOfPatientRcopiaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientRcopiaDTO" nillable="true" type="tns:PatientRcopiaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatientRcopiaDTO" nillable="true" type="tns:ArrayOfPatientRcopiaDTO" />
+  <xs:complexType name="PatientRcopiaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+      <xs:element minOccurs="0" name="RecGuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatientRcopiaDTO" nillable="true" type="tns:PatientRcopiaDTO" />
+</xs:schema>

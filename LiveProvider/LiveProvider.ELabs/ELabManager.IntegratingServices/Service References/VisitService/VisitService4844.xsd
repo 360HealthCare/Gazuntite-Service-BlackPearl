@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.ROS" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.ROS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ArrayOfROSMainCategoryTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ROSMainCategoryTypeDTO" nillable="true" type="tns:ROSMainCategoryTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfROSMainCategoryTypeDTO" nillable="true" type="tns:ArrayOfROSMainCategoryTypeDTO" />
+  <xs:complexType name="ROSMainCategoryTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsFemaleApplicable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsMaleApplicable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MainCategoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ROSMainCategoryTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UIIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="children" nillable="true" type="tns:ArrayOfROSSubCategoryTypeDTO" />
+          <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ROSMainCategoryTypeDTO" nillable="true" type="tns:ROSMainCategoryTypeDTO" />
+  <xs:complexType name="ArrayOfROSSubCategoryTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ROSSubCategoryTypeDTO" nillable="true" type="tns:ROSSubCategoryTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfROSSubCategoryTypeDTO" nillable="true" type="tns:ArrayOfROSSubCategoryTypeDTO" />
+  <xs:complexType name="ROSSubCategoryTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q2:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsFemaleApplicable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsMaleApplicable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ROSMainCategoryTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="ROSSubCategoryTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubCategoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UIIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ROSSubCategoryTypeDTO" nillable="true" type="tns:ROSSubCategoryTypeDTO" />
+</xs:schema>

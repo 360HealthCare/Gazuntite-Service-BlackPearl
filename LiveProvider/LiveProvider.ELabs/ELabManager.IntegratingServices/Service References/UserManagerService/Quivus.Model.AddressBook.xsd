@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.AddressBook" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.AddressBook" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="AddressBookDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressBookID" type="xs:int" />
+          <xs:element minOccurs="0" name="AddressDTOlist" nillable="true" type="tns:ArrayOfAddressDTO" />
+          <xs:element minOccurs="0" name="AddressPartyTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DeletedAddressIds" nillable="true" type="q2:ArrayOfint" />
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DeletedPhoneIds" nillable="true" type="q3:ArrayOfint" />
+          <xs:element minOccurs="0" name="PartyID" type="ser:guid" />
+          <xs:element minOccurs="0" name="PhoneDTOlist" nillable="true" type="tns:ArrayOfPhoneDTO" />
+          <xs:element minOccurs="0" name="UpdatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressBookDTO" nillable="true" type="tns:AddressBookDTO" />
+  <xs:complexType name="ArrayOfAddressDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddressDTO" nillable="true" type="tns:AddressDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddressDTO" nillable="true" type="tns:ArrayOfAddressDTO" />
+  <xs:complexType name="AddressDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q4:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressBookID" type="xs:int" />
+          <xs:element minOccurs="0" name="AddressID" type="xs:int" />
+          <xs:element minOccurs="0" name="AddressPhoneDTOlist" nillable="true" type="tns:ArrayOfAddressPhoneDTO" />
+          <xs:element minOccurs="0" name="AddressTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="AddressTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CityCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+          <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="IsPrimary" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OwnerTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="StateCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StateID" type="xs:int" />
+          <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ZipCodeID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressDTO" nillable="true" type="tns:AddressDTO" />
+  <xs:complexType name="ArrayOfAddressPhoneDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddressPhoneDTO" nillable="true" type="tns:AddressPhoneDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddressPhoneDTO" nillable="true" type="tns:ArrayOfAddressPhoneDTO" />
+  <xs:complexType name="AddressPhoneDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q5:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressID" type="xs:int" />
+          <xs:element minOccurs="0" name="AddressPhoneID" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="PhoneDTO" nillable="true" type="tns:PhoneDTO" />
+          <xs:element minOccurs="0" name="PhoneID" type="xs:int" />
+          <xs:element minOccurs="0" name="UpdatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressPhoneDTO" nillable="true" type="tns:AddressPhoneDTO" />
+  <xs:complexType name="PhoneDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q6:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressBookID" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsPrimary" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NumberTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OwnerTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="PhoneID" type="xs:int" />
+          <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhoneTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="PhoneTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhoneDTO" nillable="true" type="tns:PhoneDTO" />
+  <xs:complexType name="ArrayOfPhoneDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhoneDTO" nillable="true" type="tns:PhoneDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhoneDTO" nillable="true" type="tns:ArrayOfPhoneDTO" />
+  <xs:complexType name="CountryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q7:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+          <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryDTO" nillable="true" type="tns:CountryDTO" />
+</xs:schema>

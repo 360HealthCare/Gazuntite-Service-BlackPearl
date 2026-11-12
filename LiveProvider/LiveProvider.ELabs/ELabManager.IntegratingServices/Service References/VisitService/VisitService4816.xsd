@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Prescription" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Prescription" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ArrayOfPrescriptionMedicationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrescriptionMedicationDTO" nillable="true" type="tns:PrescriptionMedicationDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrescriptionMedicationDTO" nillable="true" type="tns:ArrayOfPrescriptionMedicationDTO" />
+  <xs:complexType name="PrescriptionMedicationDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BrandName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Dose" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DoseOther" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DoseTiming" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DoseUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FirstDataBankMedID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Form" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsRecordEditable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSubstitutionPermitted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModifiedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="NDCID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoteSubject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherNotes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientID" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientNotes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientPrescriptionID" type="xs:int" />
+          <xs:element minOccurs="0" name="PrescriptionMedicationID" type="xs:int" />
+          <xs:element minOccurs="0" name="Quantity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantityUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RCOPIAID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Refills" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Route" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Signature" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Strength" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VisitID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrescriptionMedicationDTO" nillable="true" type="tns:PrescriptionMedicationDTO" />
+  <xs:complexType name="ArrayOfPrescriptionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrescriptionDTO" nillable="true" type="tns:PrescriptionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrescriptionDTO" nillable="true" type="tns:ArrayOfPrescriptionDTO" />
+  <xs:complexType name="PrescriptionDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q2:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompletedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CompletionAction" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsDenied" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsVoided" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModifiedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PatientID" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientPrescriptionID" type="xs:int" />
+          <xs:element minOccurs="0" name="PreparerUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="PreparerUserTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="ProviderUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="ProviderUserTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="RCOPIAID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RxReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StopDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VisitID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrescriptionDTO" nillable="true" type="tns:PrescriptionDTO" />
+</xs:schema>

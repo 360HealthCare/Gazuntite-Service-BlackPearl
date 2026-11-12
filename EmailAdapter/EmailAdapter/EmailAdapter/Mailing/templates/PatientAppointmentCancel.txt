@@ -1,0 +1,13 @@
+Hi {0},
+
+
+Scheduled appointment with {1}, on {2} at {3} has been Canceled by Patient.
+
+
+
+
+You can also use your personal login on our Web Portal, www.quivus.com, to view the status of your daily schedules. 
+ 
+This is an auto-generated email, please do not reply.
+
+This message may contain confidential and/or privileged information. If you are not the addressee or authorized to receive this for the addressee, you must not use, copy, disclose or take any action based on this message or any information herein. If you have received this message in error, please advise the sender immediately by reply e-mail and delete this message. Thank you for your cooperation.

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.PatientBackground" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.PatientBackground" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="PatientEncounterResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientEncounterList" nillable="true" type="tns:ArrayOfPatientEncounterDTO" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatientEncounterResult" nillable="true" type="tns:PatientEncounterResult" />
+  <xs:complexType name="ArrayOfPatientEncounterDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientEncounterDTO" nillable="true" type="tns:PatientEncounterDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatientEncounterDTO" nillable="true" type="tns:ArrayOfPatientEncounterDTO" />
+  <xs:complexType name="PatientEncounterDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CanSignCosign" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictationID" type="ser:guid" />
+          <xs:element minOccurs="0" name="NoteSubject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OwnerUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="OwnerUserTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="StationID" type="xs:int" />
+          <xs:element minOccurs="0" name="StationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VisitEncounterTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitId" type="xs:int" />
+          <xs:element minOccurs="0" name="VisitNotes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitProvider" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitStatus" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientEncounterDTO" nillable="true" type="tns:PatientEncounterDTO" />
+</xs:schema>

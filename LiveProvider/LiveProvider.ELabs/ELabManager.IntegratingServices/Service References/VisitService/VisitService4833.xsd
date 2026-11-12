@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory.Social" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory.Social" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ArrayOfSocialHistoryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SocialHistoryDTO" nillable="true" type="tns:SocialHistoryDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSocialHistoryDTO" nillable="true" type="tns:ArrayOfSocialHistoryDTO" />
+  <xs:complexType name="SocialHistoryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="IsOtherYesSelected" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsRecordEditable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsWorkStatusYesSelected" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaritalStatusID" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="NoteSubject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherDictationID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OtherNotes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientID" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientSocialHistoryID" type="xs:int" />
+          <xs:element minOccurs="0" name="SocialHistoryAddictionList" nillable="true" type="tns:ArrayOfSocialHistoryAddictionDTO" />
+          <xs:element minOccurs="0" name="VisitDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VisitID" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkStatusDictationID" type="ser:guid" />
+          <xs:element minOccurs="0" name="WorkStatusNotes" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SocialHistoryDTO" nillable="true" type="tns:SocialHistoryDTO" />
+  <xs:complexType name="ArrayOfSocialHistoryAddictionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SocialHistoryAddictionDTO" nillable="true" type="tns:SocialHistoryAddictionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSocialHistoryAddictionDTO" nillable="true" type="tns:ArrayOfSocialHistoryAddictionDTO" />
+  <xs:complexType name="SocialHistoryAddictionDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q2:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddictionNotes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DictationId" type="ser:guid" />
+          <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEducated" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsNoSelected" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsPresentSelected" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsUnknown" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsYesSelected" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MediumTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="NoteSubject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OnSet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientSocialHistoryID" type="xs:int" />
+          <xs:element minOccurs="0" name="SocialHistoryAddictionID" type="xs:int" />
+          <xs:element minOccurs="0" name="SocialHistoryAddictionTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="UsageAmountID" type="xs:int" />
+          <xs:element minOccurs="0" name="VisitId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SocialHistoryAddictionDTO" nillable="true" type="tns:SocialHistoryAddictionDTO" />
+</xs:schema>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.PMH.ComprehensiveHistory.SocialHistory" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.PMH.ComprehensiveHistory.SocialHistory" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ArrayOfSocialHistoryAddictionTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SocialHistoryAddictionTypeDTO" nillable="true" type="tns:SocialHistoryAddictionTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSocialHistoryAddictionTypeDTO" nillable="true" type="tns:ArrayOfSocialHistoryAddictionTypeDTO" />
+  <xs:complexType name="SocialHistoryAddictionTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddictionName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SocialHistoryAddictionTypeID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SocialHistoryAddictionTypeDTO" nillable="true" type="tns:SocialHistoryAddictionTypeDTO" />
+  <xs:complexType name="ArrayOfSocialMaritalStatusTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SocialMaritalStatusTypeDTO" nillable="true" type="tns:SocialMaritalStatusTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSocialMaritalStatusTypeDTO" nillable="true" type="tns:ArrayOfSocialMaritalStatusTypeDTO" />
+  <xs:complexType name="SocialMaritalStatusTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q2:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MaritalStatusAbbriviation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaritalStatusCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaritalStatusID" type="xs:int" />
+          <xs:element minOccurs="0" name="MaritalStatusName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SocialMaritalStatusTypeDTO" nillable="true" type="tns:SocialMaritalStatusTypeDTO" />
+  <xs:complexType name="ArrayOfSocialHistoryUsageAmountTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SocialHistoryUsageAmountTypeDTO" nillable="true" type="tns:SocialHistoryUsageAmountTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSocialHistoryUsageAmountTypeDTO" nillable="true" type="tns:ArrayOfSocialHistoryUsageAmountTypeDTO" />
+  <xs:complexType name="SocialHistoryUsageAmountTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q3:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddictionName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsPastApplicable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPresentApplicable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SocialHistoryAddictionTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="SocialHistoryUsageAmountID" type="xs:int" />
+          <xs:element minOccurs="0" name="UsageAmountName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SocialHistoryUsageAmountTypeDTO" nillable="true" type="tns:SocialHistoryUsageAmountTypeDTO" />
+  <xs:complexType name="ArrayOfSocialHistoryMediumTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SocialHistoryMediumTypeDTO" nillable="true" type="tns:SocialHistoryMediumTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSocialHistoryMediumTypeDTO" nillable="true" type="tns:ArrayOfSocialHistoryMediumTypeDTO" />
+  <xs:complexType name="SocialHistoryMediumTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q4:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddictionName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MediumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SocialHistoryAddictionTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="SocialHistoryMediumID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SocialHistoryMediumTypeDTO" nillable="true" type="tns:SocialHistoryMediumTypeDTO" />
+</xs:schema>

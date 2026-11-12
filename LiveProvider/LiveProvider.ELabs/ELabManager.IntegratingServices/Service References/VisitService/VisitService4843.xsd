@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Recommendation" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Recommendation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.Recommendation" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ArrayOfPatientRecommendationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientRecommendationDTO" nillable="true" type="tns:PatientRecommendationDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatientRecommendationDTO" nillable="true" type="tns:ArrayOfPatientRecommendationDTO" />
+  <xs:complexType name="PatientRecommendationDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClinicBranchID" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedByUserTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiagnosisInfo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictationID" type="ser:guid" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.Recommendation" minOccurs="0" name="Duration" nillable="true" type="q2:DurationTypeDTO" />
+          <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDiscussed" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsDiscussedWithPatient" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsRecordEditable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Links" nillable="true" type="xs:string" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.Recommendation" minOccurs="0" name="Method" nillable="true" type="q3:MethodTypeDTO" />
+          <xs:element minOccurs="0" name="ModifiedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedByUserTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoteSubject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientDiagnosisID" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientID" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientRecommendationID" type="xs:int" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Assessment.Recommendation" minOccurs="0" name="Plan" nillable="true" type="q4:PlanTypeDTO" />
+          <xs:element minOccurs="0" name="VisitDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VisitID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientRecommendationDTO" nillable="true" type="tns:PatientRecommendationDTO" />
+</xs:schema>

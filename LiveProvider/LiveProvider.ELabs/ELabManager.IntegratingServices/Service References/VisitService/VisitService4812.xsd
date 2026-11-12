@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.Physical" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.Physical" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd27" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.HPI" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd28" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Labs" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd30" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Physical" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd31" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ROS" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd32" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Vitals" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="PhysicalDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.HPI" minOccurs="0" name="HPI_CC" nillable="true" type="q2:ArrayOfHPI_CCDTO" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Labs" minOccurs="0" name="InHouseLabs" nillable="true" type="q3:ArrayOfInHouseLabDTO" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Labs" minOccurs="0" name="Labs" nillable="true" type="q4:ArrayOfLabDTO" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Physical" minOccurs="0" name="Physicals" nillable="true" type="q5:ArrayOfPhysicalsDTO" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ROS" minOccurs="0" name="ReviewOfSystem" nillable="true" type="q6:ArrayOfROSDTO" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Vitals" minOccurs="0" name="Vitals" nillable="true" type="q7:VitalDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalDTO" nillable="true" type="tns:PhysicalDTO" />
+</xs:schema>

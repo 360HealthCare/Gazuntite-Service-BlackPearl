@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<RCExtRequest>
+ 
+  
+
+  <Request>
+    <Command>send_problem</Command>
+    <ProblemList>
+      <Problem>
+        <RcopiaID></RcopiaID>
+        <ExternalID></ExternalID>
+        <Patient>
+          <RcopiaID></RcopiaID>
+          <ExternalID></ExternalID>
+        </Patient>
+        <Code></Code>
+        <Description></Description>
+      </Problem> 
+    </ProblemList>
+  </Request>
+</RCExtRequest>
+

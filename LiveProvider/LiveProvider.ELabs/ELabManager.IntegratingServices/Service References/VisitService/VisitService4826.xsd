@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Physical" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Physical" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ArrayOfPhysicalsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalsDTO" nillable="true" type="tns:PhysicalsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalsDTO" nillable="true" type="tns:ArrayOfPhysicalsDTO" />
+  <xs:complexType name="PhysicalsDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DictationID" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsNormal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsRecordEditable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MainCategoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="NoteSubject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientID" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientPhysicalID" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalMainCategoryTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalSubCategoryTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="PhysicalSubLevel3CategoryTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="SubCategoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubLevel3CategoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VisitID" type="xs:int" />
+          <xs:element minOccurs="0" name="children" nillable="true" type="tns:ArrayOfPhysicalsDTO" />
+          <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhysicalsDTO" nillable="true" type="tns:PhysicalsDTO" />
+</xs:schema>

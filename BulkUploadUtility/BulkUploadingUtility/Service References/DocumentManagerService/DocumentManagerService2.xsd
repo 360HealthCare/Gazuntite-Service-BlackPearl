@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/LiveProvider.Model.TypeDTOs.DocumentManager" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LiveProvider.Model.TypeDTOs.DocumentManager" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LiveProvider.Model" />
+  <xs:import schemaLocation="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfDocumentTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentTypeDTO" nillable="true" type="tns:DocumentTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentTypeDTO" nillable="true" type="tns:ArrayOfDocumentTypeDTO" />
+  <xs:complexType name="DocumentTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/LiveProvider.Model" base="q1:LiveProviderBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DocumentTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="DocumentTypeName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocumentTypeDTO" nillable="true" type="tns:DocumentTypeDTO" />
+  <xs:complexType name="ArrayOfDocumentSectionTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentSectionTypeDTO" nillable="true" type="tns:DocumentSectionTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentSectionTypeDTO" nillable="true" type="tns:ArrayOfDocumentSectionTypeDTO" />
+  <xs:complexType name="DocumentSectionTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/LiveProvider.Model" base="q2:LiveProviderBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChildSectionType" nillable="true" type="tns:ArrayOfDocumentSectionTypeDTO" />
+          <xs:element minOccurs="0" name="OrderNo" type="xs:int" />
+          <xs:element minOccurs="0" name="ParentId" type="xs:int" />
+          <xs:element minOccurs="0" name="SectionId" type="xs:int" />
+          <xs:element minOccurs="0" name="SectionName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocumentSectionTypeDTO" nillable="true" type="tns:DocumentSectionTypeDTO" />
+  <xs:complexType name="PatientDocumentDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/LiveProvider.Model" base="q3:LiveProviderBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChildDocument" nillable="true" type="tns:ArrayOfPatientDocumentDTO" />
+          <xs:element minOccurs="0" name="ClientFilePath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CommentId" type="xs:int" />
+          <xs:element minOccurs="0" name="CommentNote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedAt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DocumentId" type="xs:int" />
+          <xs:element minOccurs="0" name="DocumentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="DocumentTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentVirtualName" type="ser:guid" />
+          <xs:element minOccurs="0" name="GenderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsDocumentFileUploaded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastSeenByUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="LastSeenDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedAt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientFullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientID" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientLastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientMiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PracticeName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ProviderIds" nillable="true" type="q4:ArrayOfint" />
+          <xs:element minOccurs="0" name="QuivusId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SectionId" type="xs:int" />
+          <xs:element minOccurs="0" name="SectionName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SectionParentId" type="xs:int" />
+          <xs:element minOccurs="0" name="ServerFilePath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrUploadedDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadedByClinicBranchId" type="xs:int" />
+          <xs:element minOccurs="0" name="UploadedByUserFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadedByUserFullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadedByUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="UploadedByUserLastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadedByUserMiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadedByUserTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="UploadedDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientDocumentDTO" nillable="true" type="tns:PatientDocumentDTO" />
+  <xs:complexType name="ArrayOfPatientDocumentDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientDocumentDTO" nillable="true" type="tns:PatientDocumentDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatientDocumentDTO" nillable="true" type="tns:ArrayOfPatientDocumentDTO" />
+  <xs:complexType name="ArrayOfSearchFieldTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchFieldTypeDTO" nillable="true" type="tns:SearchFieldTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchFieldTypeDTO" nillable="true" type="tns:ArrayOfSearchFieldTypeDTO" />
+  <xs:complexType name="SearchFieldTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/LiveProvider.Model" base="q5:LiveProviderBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FieldID" type="xs:int" />
+          <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchFieldTypeDTO" nillable="true" type="tns:SearchFieldTypeDTO" />
+</xs:schema>

@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6ACCDBFA-D29F-4DD6-BF4E-C22505891B27}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scheduler.Business</RootNamespace>
+    <AssemblyName>Scheduler.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Impl\SchedulerManagerImpl.cs" />
+    <Compile Include="BL\ISchedulerManager.cs" />
+    <Compile Include="Converter\CustomDTOConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\UserManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VisitService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="BL\ServiceReferenceFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\LiveProvider.Model\LiveProvider.Model.csproj">
+      <Project>{ABA59947-D892-43D0-9E5F-DB53C67F0659}</Project>
+      <Name>LiveProvider.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\LiveProvider.Utility\LiveProvider.Utility.csproj">
+      <Project>{D2E1849D-704B-4449-96E0-1AC31AC3FC0C}</Project>
+      <Name>LiveProvider.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scheduler.DataAccess\Scheduler.DataAccess.csproj">
+      <Project>{27711AB8-E9C0-4AE3-B41E-A3245683E1D4}</Project>
+      <Name>Scheduler.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\UserManagerService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.AddressBook.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.Clinic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.Image.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.Insurance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.PatientProfileCustomization.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.QuickLink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.RecentPatient.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.Search.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.SearchEngine.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.TypeDTOs.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.User.Patient.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.User.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Utility.Fault.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusModel.Association.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusModel.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusModel.User.ClinicUser.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusModel.User.Patient.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusModel.User.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.AllergySearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.BaseUserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.ClinicUserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.ContactSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.ExternalPatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.ICDCodeSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.ImageTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.LoginDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.ModuleTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientAllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientBasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientProfileAllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientProfileChronicMedicationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientProfileCompleteSettingDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientProfileDiagnosisDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientProfileDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientProfileImmuniztionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientProfileInsuranceDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientProfileTaggedDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientProviderAssociationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.PatientUserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.ProfileStaticDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.ProviderDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.ProviderSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.QuickLinkDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.RecentPatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.RegisterationStaticDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.SearchEngineDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.SpecialityTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.StationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.UserBasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.UserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.UserVerificationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Scheduler.Business.UserManagerService.WorkingHourDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\service.wsdl" />
+    <None Include="Service References\UserManagerService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.AllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.CPTMedicalTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.DiseaseTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.DurationTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.EncounterTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.FamilyHistoryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.FamilyHistoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.FollowupDataControlTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.FollowupLabsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.FollowUpMethodTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.HPITypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.HPI_CCDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ICDCodeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ImmunizationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ImmunizationTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.InHouseLabDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.InHouseLabTestTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.InstructionAgeTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.InstructionAgeValueTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.InstructionDurationTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.LabDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.LabNatureTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.LabTestOrderMethodTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.LabTestPriorityTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.LabTestSpecimenTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.LabTestTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.LabTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.LIONICLabTestTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.MedicalHistoryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.MedicalHistoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.MedicationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.MedicationPrescribedDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.MethodTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ModuleDictationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ModuleNoteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ModuleTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PatientDiagnosisDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PatientEncounterResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PatientFollowUpDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PatientFollowupInstructionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PatientLastSeenDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PatientRecommendationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PhysicalCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PhysicalLevel3CategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PhysicalMainCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PhysicalsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PhysicalSubCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PlanTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PrescriptionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.PrescriptionMedicationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ProcedureDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.QuickInputDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.RecentVitalDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ROSDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ROSMainCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ROSSubCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ROSSubLevelCategoryTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.ServiceTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.SoapTemplateTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.SocialHistoryAddictionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.SocialHistoryAddictionTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.SocialHistoryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.SocialHistoryMediumTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.SocialHistoryUsageAmountTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.SocialhistoryVBDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.SocialMaritalStatusTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.VisistStakeHolderDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.VisitDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.VitalDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\Scheduler.Business.VisitService.VitalTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VisitService\VisitService1.wsdl" />
+    <None Include="Service References\VisitService\VisitService47.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService471.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4710.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4711.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4712.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4713.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4714.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4715.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4716.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4717.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4718.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4719.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService472.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4720.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4721.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4722.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4723.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4724.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4725.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4726.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4727.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4728.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4729.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService473.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4730.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4731.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4732.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4733.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4734.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4735.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4736.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4737.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4738.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4739.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService474.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4740.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4741.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4742.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4743.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4744.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4745.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService4746.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService475.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService476.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService477.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService478.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService479.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\UserManagerService\" />
+    <WCFMetadataStorage Include="Service References\VisitService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\VisitService1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

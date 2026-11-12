@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4FB08438-241D-4F0F-B826-A6ACC43CB5FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuivusModel</RootNamespace>
+    <AssemblyName>QuivusModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressBook\AddressBookDTO.cs" />
+    <Compile Include="AddressBook\AddressDTO.cs" />
+    <Compile Include="AddressBook\AddressPartyTypeDTO.cs" />
+    <Compile Include="AddressBook\AddressPhoneDTO.cs" />
+    <Compile Include="AddressBook\AddressTypeDTO.cs" />
+    <Compile Include="AddressBook\CityDTO.cs" />
+    <Compile Include="AddressBook\CountryDTO.cs" />
+    <Compile Include="AddressBook\OwnerTypeDTO.cs" />
+    <Compile Include="AddressBook\PatientAddressBookInfoDTO.cs" />
+    <Compile Include="AddressBook\PhoneDTO.cs" />
+    <Compile Include="AddressBook\PhoneNumberTypeDTO.cs" />
+    <Compile Include="AddressBook\PhoneTypeDTO.cs" />
+    <Compile Include="AddressBook\StateDTO.cs" />
+    <Compile Include="AddressBook\ZipCodeDTO.cs" />
+    <Compile Include="Association\PatientProviderAssociationDTO.cs" />
+    <Compile Include="Clinic\ClinicBranchDTO.cs" />
+    <Compile Include="Clinic\ClinicDTO.cs" />
+    <Compile Include="Common\AddressBookStaticDataDTO.cs" />
+    <Compile Include="Common\AllergySearchDTO.cs" />
+    <Compile Include="Common\ICDCodeSearchDTO.cs" />
+    <Compile Include="Common\LoginDTO.cs" />
+    <Compile Include="Common\ProfileStaticDataDTO.cs" />
+    <Compile Include="Common\ProviderSearchDTO.cs" />
+    <Compile Include="Common\RegisterationStaticDataDTO.cs" />
+    <Compile Include="Common\SearchProviderCriteriaDTO.cs" />
+    <Compile Include="Common\StationDTO.cs" />
+    <Compile Include="Common\UserClinicRoleDTO.cs" />
+    <Compile Include="Communication\AlertsDTO\AlertCategoryDTO.cs" />
+    <Compile Include="Communication\AlertsDTO\AlertDTO.cs" />
+    <Compile Include="Communication\AlertsDTO\AlertInboxDTO.cs" />
+    <Compile Include="Communication\AlertsDTO\AlertRecieverListDTO.cs" />
+    <Compile Include="Communication\AlertsDTO\AlertRecurrenceDTO.cs" />
+    <Compile Include="Communication\AlertsDTO\AlertSenderListDTO.cs" />
+    <Compile Include="Communication\AlertsDTO\AlertSeverityDTO.cs" />
+    <Compile Include="Communication\AlertsDTO\AlertStatusDTO.cs" />
+    <Compile Include="Communication\MailDTO\EmailDTO.cs" />
+    <Compile Include="Communication\SMSDTO\SMSLogDTO.cs" />
+    <Compile Include="Communication\SMSDTO\SMSTemplateDTO.cs" />
+    <Compile Include="Image\ImageDTO.cs" />
+    <Compile Include="Insurance\InsuranceOrganizationDTO.cs" />
+    <Compile Include="PatientBackground\PatientEncounterDTO.cs" />
+    <Compile Include="PatientBackground\PatientEncounterResult.cs" />
+    <Compile Include="PatientProfileCustomization\PatientAllergyInfoDTO.cs" />
+    <Compile Include="PatientProfileCustomization\PatientChronicMedicationInfoDTO.cs" />
+    <Compile Include="PatientProfileCustomization\PatientDiagnosisInfoDTO.cs" />
+    <Compile Include="PatientProfileCustomization\PatientImmunizationInfoDTO.cs" />
+    <Compile Include="PatientProfileCustomization\PatientInsuracneInfoDTO.cs" />
+    <Compile Include="PatientProfileCustomization\PatientProfileAllergyDTO.cs" />
+    <Compile Include="PatientProfileCustomization\PatientProfileBasicInfoDTO.cs" />
+    <Compile Include="PatientProfileCustomization\PatientProfileChronicMedicationDTO.cs" />
+    <Compile Include="PatientProfileCustomization\PatientProfileDiagnosisDTO.cs" />
+    <Compile Include="PatientProfileCustomization\PatientProfileImmuniztionDTO.cs" />
+    <Compile Include="PatientProfileCustomization\PatientProfileInsuranceDTO.cs" />
+    <Compile Include="PatientProfileCustomization\PatientProfileTaggedDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickInput\Allergy\AllergyDTO.cs" />
+    <Compile Include="QuickInput\ChiefComplaint\ChiefComplaintDTO.cs" />
+    <Compile Include="QuickInput\ChronicDiagnosis\ChronicDiagnosisDTO.cs" />
+    <Compile Include="QuickInput\ComprehensiveHistory\Social\SocialhistoryVBDTO.cs" />
+    <Compile Include="QuickInput\FollowUp\FollowupLabsDTO.cs" />
+    <Compile Include="QuickInput\FollowUp\PatientFollowupInstructionDTO.cs" />
+    <Compile Include="QuickInput\Labs\InHouseLabDTO.cs" />
+    <Compile Include="QuickInput\MedicationPrescribed\MedicationPrescribedDTO.cs" />
+    <Compile Include="QuickInput\ComprehensiveHistory\ComprehensiveHistoryDTO.cs" />
+    <Compile Include="QuickInput\ComprehensiveHistory\Family\FamilyHistoryDTO.cs" />
+    <Compile Include="QuickInput\ComprehensiveHistory\Medical\MedicalHistoryDTO.cs" />
+    <Compile Include="QuickInput\ComprehensiveHistory\Social\SocialHistoryAddictionDTO.cs" />
+    <Compile Include="QuickInput\ComprehensiveHistory\Social\SocialHistoryDTO.cs" />
+    <Compile Include="QuickInput\Diagnosis\PatientDiagnosisDTO.cs" />
+    <Compile Include="QuickInput\Dictation\DictationDTO.cs.cs" />
+    <Compile Include="QuickInput\Dictation\ModuleDictationDTO.cs" />
+    <Compile Include="QuickInput\FollowUp\PatientFollowUpDTO.cs" />
+    <Compile Include="QuickInput\HPI\HPIDetailsDTO.cs" />
+    <Compile Include="QuickInput\HPI\HPI_CCDTO.cs" />
+    <Compile Include="QuickInput\Immunization\ImmunizationDTO.cs" />
+    <Compile Include="QuickInput\Labs\LabDTO.cs" />
+    <Compile Include="QuickInput\MainQuickInput\Assessment\AssessmentDTO.cs" />
+    <Compile Include="QuickInput\MainQuickInput\Physical\PhysicalDTO.cs" />
+    <Compile Include="QuickInput\MainQuickInput\PMH\PMHDTO.cs" />
+    <Compile Include="QuickInput\MainQuickInput\QuickInputDTO.cs" />
+    <Compile Include="QuickInput\Medication\MedicationDTO.cs" />
+    <Compile Include="QuickInput\ModuleNotes\ModuleNoteDTO.cs" />
+    <Compile Include="QuickInput\Physical\PhysicalsDTO.cs" />
+    <Compile Include="QuickInput\Prescription\PrescriptionDTO.cs" />
+    <Compile Include="QuickInput\Prescription\PrescriptionMedicationDTO.cs" />
+    <Compile Include="QuickInput\Procedure\ProcedureDTO.cs" />
+    <Compile Include="QuickInput\ROS\ROSDTO.cs" />
+    <Compile Include="QuickInput\SoapTemplate\SoapTemplateTypeDTO.cs" />
+    <Compile Include="QuickInput\Recommendation\PatientRecommendationDTO.cs" />
+    <Compile Include="QuickInput\Vitals\RecentVitalDTO.cs" />
+    <Compile Include="QuickInput\Vitals\VitalDTO.cs" />
+    <Compile Include="QuickLink\QuickLinkDTO.cs" />
+    <Compile Include="QuivusBaseDTO.cs" />
+    <Compile Include="QuivusBaseTypeDTO.cs" />
+    <Compile Include="RecentPatient\RecentPatientDTO.cs" />
+    <Compile Include="SearchEngine\SearchEngineDTO.cs" />
+    <Compile Include="Common\UserClinicBranchDTO.cs" />
+    <Compile Include="Search\ContactSearchDTO.cs" />
+    <Compile Include="Search\PatientSearchDTO.cs" />
+    <Compile Include="Search\PatientSearchResultDTO.cs" />
+    <Compile Include="TypeDTOs\AllergyTypeDTO.cs" />
+    <Compile Include="TypeDTOs\DiseaseTypeDTO.cs" />
+    <Compile Include="TypeDTOs\EncounterTypeDTO.cs" />
+    <Compile Include="TypeDTOs\EthinicityTypeDTO.cs" />
+    <Compile Include="TypeDTOs\GenderTypeDTO.cs" />
+    <Compile Include="TypeDTOs\ICDCodeDTO.cs" />
+    <Compile Include="TypeDTOs\ImageTypeDTO.cs" />
+    <Compile Include="TypeDTOs\ImmunizationTypeDTO.cs" />
+    <Compile Include="TypeDTOs\InsuranceNatureDTO.cs" />
+    <Compile Include="TypeDTOs\InsuranceTypeDTO.cs" />
+    <Compile Include="TypeDTOs\LanguageAbilityModeDTO.cs" />
+    <Compile Include="TypeDTOs\LanguageTypeDTO.cs" />
+    <Compile Include="TypeDTOs\MaritalStatusTypeDTO.cs" />
+    <Compile Include="TypeDTOs\ModuleTypeDTO.cs" />
+    <Compile Include="TypeDTOs\OccupationTypeDTO.cs" />
+    <Compile Include="TypeDTOs\PrefixTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Assessment\FollowUp\FollowupDataControlTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Assessment\FollowUp\FollowUpMethodTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Assessment\FollowUp\InstructionAgeTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Assessment\FollowUp\InstructionAgeValueTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Assessment\FollowUp\InstructionDurationTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Assessment\FollowUp\ServiceTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Assessment\Recommendation\DurationTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Assessment\Recommendation\MethodTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Assessment\Recommendation\PlanTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Assessment\Recommendation\RecommendationLinksTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\CPTMedicalTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\HPI\HPIDataControlTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\HPI\HPITypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Labs\InHouseLabTestTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Labs\LabNatureTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Labs\LabTestOrderMethodTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Labs\LabTestPriorityTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Labs\LabTestSpecimenTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Labs\LabTestTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Labs\LabTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Labs\LIONICLabTestTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Physicals\PhysicalCategoryTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Physicals\PhysicalLevel3CategoryTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Physicals\PhysicalMainCategoryTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Physicals\PhysicalSubCategoryTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\ROS\ROSCategoryTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\ROS\ROSMainCategoryTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\ROS\ROSSubCategoryTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\ROS\ROSSubLevelCategoryTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\Physical\Vital\VitalTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\PMH\ComprehensiveHistory\FamilyHistory\FamilyHistoryTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\PMH\ComprehensiveHistory\MedicalHistory\MedicalHistoryTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\PMH\ComprehensiveHistory\SocialHistory\SocialHistoryMediumTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\PMH\ComprehensiveHistory\SocialHistory\SocialHistoryUsageAmountTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\PMH\ComprehensiveHistory\SocialHistory\SocialMaritalStatusTypeDTO.cs" />
+    <Compile Include="TypeDTOs\QuickInputTypeDTOs\PMH\ComprehensiveHistory\SocialHistory\SocialHistoryAddictionTypeDTO.cs" />
+    <Compile Include="TypeDTOs\RaceTypeDTO.cs" />
+    <Compile Include="TypeDTOs\RelationshipTypeDTO.cs" />
+    <Compile Include="TypeDTOs\SmokingTypeDTO.cs" />
+    <Compile Include="TypeDTOs\SpecialityTypeDTO.cs" />
+    <Compile Include="TypeDTOs\StatusTypeDTO.cs" />
+    <Compile Include="TypeDTOs\UserTypeDTO.cs" />
+    <Compile Include="User\BillingAssistantDTO.cs" />
+    <Compile Include="User\ClinicUser\ClinicUserDTO.cs" />
+    <Compile Include="User\DoctorDTO.cs" />
+    <Compile Include="User\LabTechnicianDTO.cs" />
+    <Compile Include="User\NurseDTO.cs" />
+    <Compile Include="User\NursePractitionerDTO.cs" />
+    <Compile Include="User\Patient\ExternalPatientDTO.cs" />
+    <Compile Include="User\Patient\ExternalPatientInfoDTO.cs" />
+    <Compile Include="User\Patient\PatientAllergyDTO.cs" />
+    <Compile Include="User\Patient\PatientBasicInfoDTO.cs" />
+    <Compile Include="User\Patient\PatientDTO.cs" />
+    <Compile Include="User\Patient\PatientEmergencyContactDTO.cs" />
+    <Compile Include="User\Patient\PatientFamilyHistoryDTO.cs" />
+    <Compile Include="User\Patient\PatientGuarantorDTO.cs" />
+    <Compile Include="User\Patient\PatientHealthDTO.cs" />
+    <Compile Include="User\Patient\PatientInsuranceDTO.cs" />
+    <Compile Include="User\Patient\PatientLanguageDTO.cs" />
+    <Compile Include="User\Patient\PatientLastSeenDTO.cs" />
+    <Compile Include="User\Patient\PatientMedicalHistoryDTO.cs" />
+    <Compile Include="User\Patient\PatientProfileCompleteSettingDTO.cs" />
+    <Compile Include="User\Patient\PatientProfileDTO.cs" />
+    <Compile Include="User\Patient\PatientProfileSettingDTO.cs" />
+    <Compile Include="User\Patient\PatientRcopiaDTO.cs" />
+    <Compile Include="User\Patient\PatientUserInfo.cs" />
+    <Compile Include="User\Patient\ProfileSettingsCollectionDTO.cs" />
+    <Compile Include="User\PracticeManagerDTO.cs" />
+    <Compile Include="User\BaseUserDTO.cs" />
+    <Compile Include="User\ProviderDTO.cs" />
+    <Compile Include="User\ReceptionistDTO.cs" />
+    <Compile Include="User\RegistrationDTO.cs" />
+    <Compile Include="User\UserBasicInfoDTO.cs" />
+    <Compile Include="User\UserDTO.cs" />
+    <Compile Include="User\UserVerificationDTO.cs" />
+    <Compile Include="User\WorkingHourDTO.cs" />
+    <Compile Include="Visit\VisistStakeHolderDTO.cs" />
+    <Compile Include="Visit\VisitDTO.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.Labs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.Labs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="InHouseLabTestTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ClinicBranchID" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InHouseLabTestTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="TestCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TestName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TestRange" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InHouseLabTestTypeDTO" nillable="true" type="tns:InHouseLabTestTypeDTO" />
+  <xs:complexType name="LIONICLabTestTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q2:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LOINC_NUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LionicLabTestTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="SHORTNAME" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LIONICLabTestTypeDTO" nillable="true" type="tns:LIONICLabTestTypeDTO" />
+  <xs:complexType name="LabTestOrderMethodTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q3:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabTestOrderMethodTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderMethodTypeName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LabTestOrderMethodTypeDTO" nillable="true" type="tns:LabTestOrderMethodTypeDTO" />
+  <xs:complexType name="LabTestPriorityTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q4:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabTestPriorityTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="PriorityName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LabTestPriorityTypeDTO" nillable="true" type="tns:LabTestPriorityTypeDTO" />
+  <xs:complexType name="LabTestSpecimenTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q5:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabTestSpecimenTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="SpecimenName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LabTestSpecimenTypeDTO" nillable="true" type="tns:LabTestSpecimenTypeDTO" />
+  <xs:complexType name="LabTestTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q6:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabTestTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="TestTypeName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LabTestTypeDTO" nillable="true" type="tns:LabTestTypeDTO" />
+  <xs:complexType name="LabTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q7:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LabName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabTypeID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LabTypeDTO" nillable="true" type="tns:LabTypeDTO" />
+  <xs:complexType name="ArrayOfLabNatureTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabNatureTypeDTO" nillable="true" type="tns:LabNatureTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabNatureTypeDTO" nillable="true" type="tns:ArrayOfLabNatureTypeDTO" />
+  <xs:complexType name="LabNatureTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q8:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabTestNatureName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabTestNatureTypeID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LabNatureTypeDTO" nillable="true" type="tns:LabNatureTypeDTO" />
+  <xs:complexType name="ArrayOfLabTestPriorityTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabTestPriorityTypeDTO" nillable="true" type="tns:LabTestPriorityTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabTestPriorityTypeDTO" nillable="true" type="tns:ArrayOfLabTestPriorityTypeDTO" />
+  <xs:complexType name="ArrayOfLabTestSpecimenTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabTestSpecimenTypeDTO" nillable="true" type="tns:LabTestSpecimenTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabTestSpecimenTypeDTO" nillable="true" type="tns:ArrayOfLabTestSpecimenTypeDTO" />
+  <xs:complexType name="ArrayOfLabTestTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabTestTypeDTO" nillable="true" type="tns:LabTestTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabTestTypeDTO" nillable="true" type="tns:ArrayOfLabTestTypeDTO" />
+  <xs:complexType name="ArrayOfLabTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabTypeDTO" nillable="true" type="tns:LabTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabTypeDTO" nillable="true" type="tns:ArrayOfLabTypeDTO" />
+  <xs:complexType name="ArrayOfLabTestOrderMethodTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabTestOrderMethodTypeDTO" nillable="true" type="tns:LabTestOrderMethodTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabTestOrderMethodTypeDTO" nillable="true" type="tns:ArrayOfLabTestOrderMethodTypeDTO" />
+  <xs:complexType name="ArrayOfLIONICLabTestTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LIONICLabTestTypeDTO" nillable="true" type="tns:LIONICLabTestTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLIONICLabTestTypeDTO" nillable="true" type="tns:ArrayOfLIONICLabTestTypeDTO" />
+  <xs:complexType name="ArrayOfInHouseLabTestTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InHouseLabTestTypeDTO" nillable="true" type="tns:InHouseLabTestTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInHouseLabTestTypeDTO" nillable="true" type="tns:ArrayOfInHouseLabTestTypeDTO" />
+</xs:schema>

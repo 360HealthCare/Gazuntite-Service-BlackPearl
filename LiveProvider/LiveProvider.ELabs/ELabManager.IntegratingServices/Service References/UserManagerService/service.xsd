@@ -1,0 +1,1199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/QuivusModel.User.ClinicUser" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/QuivusModel.User" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/QuivusModel.Common" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/QuivusModel.Association" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.Search" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/QuivusModel.Clinic" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.Clinic" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/QuivusModel.Search" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.PatientProfileCustomization" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.User" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/QuivusModel.User.Patient" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.Common" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickLink" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.SearchEngine" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.RecentPatient" />
+  <xs:element name="LoadPatientAllergyInfoByPatientIdForCompleteProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientAllergyInfoByPatientIdForCompleteProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="LoadPatientAllergyInfoByPatientIdForCompleteProfileResult" nillable="true" type="q1:ArrayOfPatientAllergyDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyUserEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyUserEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyUserEmailResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DateTestService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DateTestServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DateTestServiceResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicBranchIdByClinicBranchName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ClicniBranchName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicBranchIdByClinicBranchNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoadClinicBranchIdByClinicBranchNameResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClinicBranchIdByClinicBranchCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="branchCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClinicBranchIdByClinicBranchCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetClinicBranchIdByClinicBranchCodeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManageClinicUserProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/QuivusModel.User.ClinicUser" minOccurs="0" name="clinicUser" nillable="true" type="q2:ClinicUserDTO" />
+        <xs:element minOccurs="0" name="userTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManageClinicUserProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ManageClinicUserProfileResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicUserProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element minOccurs="0" name="userTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicUserProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/QuivusModel.User.ClinicUser" minOccurs="0" name="LoadClinicUserProfileResult" nillable="true" type="q3:ClinicUserDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadSpecialityTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadSpecialityTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs" minOccurs="0" name="LoadSpecialityTypesResult" nillable="true" type="q4:ArrayOfSpecialityTypeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllProviderByClinicBranchIdAndStationId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clinicBranchID" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="stationIds" nillable="true" type="q5:ArrayOfint" />
+        <xs:element minOccurs="0" name="isLoadAll" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllProviderByClinicBranchIdAndStationIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/QuivusModel.User" minOccurs="0" name="LoadAllProviderByClinicBranchIdAndStationIdResult" nillable="true" type="q6:ArrayOfProviderDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllStationsByClinicId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clinicBranchID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllStationsByClinicIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/QuivusModel.Common" minOccurs="0" name="LoadAllStationsByClinicIdResult" nillable="true" type="q7:ArrayOfStationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadProviderWorkingHours">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerUserId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadProviderWorkingHoursResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/QuivusModel.User" minOccurs="0" name="LoadProviderWorkingHoursResult" nillable="true" type="q8:WorkingHourDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAllPatientProvidersWithLocations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAllPatientProvidersWithLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/QuivusModel.Association" minOccurs="0" name="ListAllPatientProvidersWithLocationsResult" nillable="true" type="q9:ArrayOfPatientProviderAssociationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckProviderAuthorityForPatientInfoAccess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckProviderAuthorityForPatientInfoAccessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckProviderAuthorityForPatientInfoAccessResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManageProviderAuthorization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/QuivusModel.Association" minOccurs="0" name="patientProviderAssociationDTO" nillable="true" type="q10:PatientProviderAssociationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManageProviderAuthorizationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ManageProviderAuthorizationResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProviderForAppointment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/QuivusModel.Common" minOccurs="0" name="criteria" nillable="true" type="q11:SearchProviderCriteriaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProviderForAppointmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/QuivusModel.Common" minOccurs="0" name="SearchProviderForAppointmentResult" nillable="true" type="q12:ArrayOfProviderSearchDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadUsersByPracticeId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clinicBranchID" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadUsersByPracticeIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Quivus.Model.Search" minOccurs="0" name="LoadUsersByPracticeIdResult" nillable="true" type="q13:PatientSearchResultDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStationNamesByStationID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="stationIDList" nillable="true" type="q14:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStationNamesByStationIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/QuivusModel.Common" minOccurs="0" name="GetStationNamesByStationIDResult" nillable="true" type="q15:ArrayOfStationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicRoomByStationId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicRoomByStationIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/QuivusModel.Clinic" minOccurs="0" name="LoadClinicRoomByStationIdResult" nillable="true" type="q16:ArrayOfClinicRoomDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicBranchAndStationInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicBranchAndStationInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Quivus.Model.Clinic" minOccurs="0" name="LoadClinicBranchAndStationInfoResult" nillable="true" type="q17:ClinicDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllUserType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllUserTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs" minOccurs="0" name="LoadAllUserTypeResult" nillable="true" type="q18:ArrayOfUserTypeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllClinicBranch">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllClinicBranchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LoadAllClinicBranchResult" nillable="true" type="q19:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicBranchUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicBranchUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LoadClinicBranchUsersResult" nillable="true" type="q20:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicUserBasicInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadClinicUserBasicInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/QuivusModel.Search" minOccurs="0" name="LoadClinicUserBasicInfoResult" nillable="true" type="q21:ClinicProviderSearchDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="update" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserStatusResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserBasicInfoByPatientIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PatientIdList" nillable="true" type="q22:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserBasicInfoByPatientIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/QuivusModel.User" minOccurs="0" name="GetUserBasicInfoByPatientIdsResult" nillable="true" type="q23:ArrayOfPatientBasicUserDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientAllergy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+        <xs:element minOccurs="0" name="createdBy" type="xs:int" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="patientAllergy" nillable="true" type="q24:PatientAllergyDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientAllergyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePatientAllergyResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientCompleteProfileForClinic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="providerUserId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientCompleteProfileForClinicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="LoadPatientCompleteProfileForClinicResult" nillable="true" type="q25:PatientProfileDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserEmailByUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserEmailByUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserEmailByUserIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientProfileInfoForProvider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="providerUserId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientProfileInfoForProviderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Quivus.Model.PatientProfileCustomization" minOccurs="0" name="LoadPatientProfileInfoForProviderResult" nillable="true" type="q26:PatientProfileTaggedDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientAllergiesForProvider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientAllergiesForProviderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Quivus.Model.PatientProfileCustomization" minOccurs="0" name="LoadPatientAllergiesForProviderResult" nillable="true" type="q27:PatientProfileAllergyDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientDiagnosisForProvider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientDiagnosisForProviderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Quivus.Model.PatientProfileCustomization" minOccurs="0" name="LoadPatientDiagnosisForProviderResult" nillable="true" type="q28:PatientProfileDiagnosisDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientImmunizationForProvider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientImmunizationForProviderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Quivus.Model.PatientProfileCustomization" minOccurs="0" name="LoadPatientImmunizationForProviderResult" nillable="true" type="q29:PatientProfileImmuniztionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientMedicationForProvider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientMedicationForProviderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Quivus.Model.PatientProfileCustomization" minOccurs="0" name="LoadPatientMedicationForProviderResult" nillable="true" type="q30:PatientProfileChronicMedicationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientInsuranceForProvider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientInsuranceForProviderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Quivus.Model.PatientProfileCustomization" minOccurs="0" name="LoadPatientInsuranceForProviderResult" nillable="true" type="q31:PatientProfileInsuranceDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadImageTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadImageTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs" minOccurs="0" name="LoadImageTypesResult" nillable="true" type="q32:ArrayOfImageTypeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartyGuidByProfileIdAndTypeId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleProfileID" type="xs:int" />
+        <xs:element minOccurs="0" name="addressPartyTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartyGuidByProfileIdAndTypeIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="GetPartyGuidByProfileIdAndTypeIdResult" type="q33:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserBasicInfoById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ProviderIdList" nillable="true" type="q34:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserBasicInfoByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Quivus.Model.User" minOccurs="0" name="GetUserBasicInfoByIdResult" nillable="true" type="q35:ArrayOfUserBasicInfoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadModuleTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadModuleTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs" minOccurs="0" name="LoadModuleTypesResult" nillable="true" type="q36:ArrayOfModuleTypeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsProviderAtClinic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsProviderAtClinicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsProviderAtClinicResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartyGuidByPatientIdAndPartyTypeId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+        <xs:element minOccurs="0" name="partyTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartyGuidByPatientIdAndPartyTypeIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="GetPartyGuidByPatientIdAndPartyTypeIdResult" type="q37:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagePatient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="patientDTO" nillable="true" type="q38:PatientDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagePatientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ManagePatientResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientByPatientId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientByPatientIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="LoadPatientByPatientIdResult" nillable="true" type="q39:PatientDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientBasicInfoByPatientId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientBasicInfoByPatientIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/QuivusModel.User.Patient" minOccurs="0" name="LoadPatientBasicInfoByPatientIdResult" nillable="true" type="q40:PatientBasicInfoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientUserInfoByQuivusId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QuivusId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientUserInfoByQuivusIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/QuivusModel.User.Patient" minOccurs="0" name="LoadPatientUserInfoByQuivusIdResult" nillable="true" type="q41:PatientUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Quivus.Model.User" minOccurs="0" name="VerifyUserResult" nillable="true" type="q42:UserVerificationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBaseUserByUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBaseUserByUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Quivus.Model.User" minOccurs="0" name="LoadBaseUserByUserIdResult" nillable="true" type="q43:BaseUserDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadQuivusIdByPatientId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadQuivusIdByPatientIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoadQuivusIdByPatientIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadRcopiaIdByPatientId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadRcopiaIdByPatientIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoadRcopiaIdByPatientIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePatientEPrescriptionDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RCopiaID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePatientEPrescriptionDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePatientEPrescriptionDetailsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadExternalPatients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FromRecord" type="xs:int" />
+        <xs:element minOccurs="0" name="ToRecord" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadExternalPatientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/QuivusModel.User.Patient" minOccurs="0" name="LoadExternalPatientsResult" nillable="true" type="q44:ExternalPatientDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePatientRCopiaId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/QuivusModel.User.Patient" minOccurs="0" name="patientList" nillable="true" type="q45:ArrayOfPatientRcopiaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePatientRCopiaIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePatientRCopiaIdResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllProviderByClinicBranchId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clinicBranchID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllProviderByClinicBranchIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/QuivusModel.User" minOccurs="0" name="LoadAllProviderByClinicBranchIdResult" nillable="true" type="q46:ArrayOfProviderDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientBaseUserInfoByPatientIdForCompleteProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientBaseUserInfoByPatientIdForCompleteProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Quivus.Model.User" minOccurs="0" name="LoadPatientBaseUserInfoByPatientIdForCompleteProfileResult" nillable="true" type="q47:BaseUserDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingService">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingServiceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Quivus.Model.Common" minOccurs="0" name="AuthenticateUserResult" nillable="true" type="q48:LoginDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogLoginHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="userType" type="xs:int" />
+        <xs:element minOccurs="0" name="clinicBranch" type="xs:int" />
+        <xs:element minOccurs="0" name="isSucessFull" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogLoginHistoryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadUserDefaultQuickLinksbyLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="ClinicBranchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadUserDefaultQuickLinksbyLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickLink" minOccurs="0" name="LoadUserDefaultQuickLinksbyLocationResult" nillable="true" type="q49:ArrayOfQuickLinkDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadUserSearchEnginebyLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="ClinicBranchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadUserSearchEnginebyLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Quivus.Model.SearchEngine" minOccurs="0" name="LoadUserSearchEnginebyLocationResult" nillable="true" type="q50:ArrayOfSearchEngineDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllSearchEngines">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllSearchEnginesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Quivus.Model.SearchEngine" minOccurs="0" name="LoadAllSearchEnginesResult" nillable="true" type="q51:ArrayOfSearchEngineDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDefaultSearchEngine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProviderUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="ClinicBranchID" type="xs:int" />
+        <xs:element minOccurs="0" name="UserSearchEngineID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDefaultSearchEngineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetDefaultSearchEngineResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManageUserSearchEngine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProviderUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="ClinicBranchID" type="xs:int" />
+        <xs:element xmlns:q52="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SearchEngineTypeIDs" nillable="true" type="q52:ArrayOfint" />
+        <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManageUserSearchEngineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ManageUserSearchEngineResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearUserAddedSearchEngines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProviderUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="ClinicBranchID" type="xs:int" />
+        <xs:element minOccurs="0" name="ModifiedBy" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearUserAddedSearchEnginesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ClearUserAddedSearchEnginesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadUsersByClinicBranchID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ClinicBranchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadUsersByClinicBranchIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Quivus.Model.Search" minOccurs="0" name="LoadUsersByClinicBranchIDResult" nillable="true" type="q53:ArrayOfContactSearchDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterNewUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Quivus.Model.User" minOccurs="0" name="registrationDTO" nillable="true" type="q54:RegistrationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterNewUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Quivus.Model.User" minOccurs="0" name="RegisterNewUserResult" nillable="true" type="q55:UserDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterationStaticData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterationStaticDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Quivus.Model.Common" minOccurs="0" name="GetRegisterationStaticDataResult" nillable="true" type="q56:RegisterationStaticDataDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchAllergyTypeByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="allergyName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchAllergyTypeByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Quivus.Model.Common" minOccurs="0" name="SearchAllergyTypeByNameResult" nillable="true" type="q57:ArrayOfAllergySearchDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchICDCodeByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="icdCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchICDCodeByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Quivus.Model.Common" minOccurs="0" name="SearchICDCodeByCodeResult" nillable="true" type="q58:ArrayOfICDCodeSearchDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientBasicProfileAndLangauge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="managedByUserID" type="xs:int" />
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="patientDTO" nillable="true" type="q59:PatientDTO" />
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="PatientLanguageDTOList" nillable="true" type="q60:ArrayOfPatientLanguageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientBasicProfileAndLangaugeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePatientBasicProfileAndLangaugeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientGurantor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientID" type="xs:int" />
+        <xs:element minOccurs="0" name="managedByUserID" type="xs:int" />
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="patientGurantorDTO" nillable="true" type="q61:PatientGuarantorDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientGurantorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePatientGurantorResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientHealthInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientID" type="xs:int" />
+        <xs:element minOccurs="0" name="managedByUserID" type="xs:int" />
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="patientHealthDTO" nillable="true" type="q62:PatientHealthDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientHealthInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePatientHealthInfoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientInsuranceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientID" type="xs:int" />
+        <xs:element minOccurs="0" name="managedByUserID" type="xs:int" />
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="patientInsuranceDTOList" nillable="true" type="q63:ArrayOfPatientInsuranceDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientInsuranceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePatientInsuranceInfoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterBaseUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Quivus.Model.User" minOccurs="0" name="baseUserDTO" nillable="true" type="q64:BaseUserDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterBaseUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterBaseUserResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagePatientEmergencyContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PatientID" type="xs:int" />
+        <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="EmergencyContactList" nillable="true" type="q65:ArrayOfPatientEmergencyContactDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagePatientEmergencyContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ManagePatientEmergencyContactResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterationStaticDataByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="typeList" nillable="true" type="q66:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegisterationStaticDataByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Quivus.Model.Common" minOccurs="0" name="GetRegisterationStaticDataByTypeResult" nillable="true" type="q67:RegisterationStaticDataDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPatientbyClinicIdAndSearchString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="providerId" type="xs:int" />
+        <xs:element minOccurs="0" name="userTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="searchString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="demandPageNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPatientbyClinicIdAndSearchStringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Quivus.Model.Search" minOccurs="0" name="SearchPatientbyClinicIdAndSearchStringResult" nillable="true" type="q68:PatientSearchResultDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRecentPatient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="providerUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="patientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRecentPatientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveRecentPatientResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadRecentPatientsByProviderIdAndBranchId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadRecentPatientsByProviderIdAndBranchIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Quivus.Model.RecentPatient" minOccurs="0" name="LoadRecentPatientsByProviderIdAndBranchIdResult" nillable="true" type="q69:ArrayOfRecentPatientDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientProfileSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientProfileSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="LoadPatientProfileSettingsResult" nillable="true" type="q70:PatientProfileCompleteSettingDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientProfileSettingsBySection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clinicBranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+        <xs:element minOccurs="0" name="SectionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPatientProfileSettingsBySectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="LoadPatientProfileSettingsBySectionResult" nillable="true" type="q71:PatientProfileCompleteSettingDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagePatientProfileSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" minOccurs="0" name="ProfileSettingsObj" nillable="true" type="q72:PatientProfileSettingDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagePatientProfileSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ManagePatientProfileSettingsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadProfileStaticData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadProfileStaticDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Quivus.Model.Common" minOccurs="0" name="LoadProfileStaticDataResult" nillable="true" type="q73:ArrayOfProfileStaticDataDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

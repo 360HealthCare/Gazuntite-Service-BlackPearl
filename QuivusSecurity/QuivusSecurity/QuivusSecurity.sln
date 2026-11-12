@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuivusSecurity.DAO", "QuivusSecurity.DAO\QuivusSecurity.DAO.csproj", "{0B0921CF-F350-4FE4-AB37-7665D5B205B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuivusSecurity.IntegratedService", "QuivusSecurity.IntegratedService\QuivusSecurity.IntegratedService.csproj", "{517A7865-FF68-4F0A-9CCC-53221D9BE6C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuivusSecurityService", "QuivusSecurityService\QuivusSecurityService.csproj", "{90F9FE94-2BE6-4465-B4D2-150C0EB718EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuivusSecurity.Business", "QuivusSecurity.Business\QuivusSecurity.Business.csproj", "{8EBB3771-CA72-4415-B83F-4EFDCB935553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuivusSecurity.Logger", "QuivusSecurity.Logger\QuivusSecurity.Logger.csproj", "{C4121AAE-16B3-4140-B9A7-B160C8173BFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuivusModel", "..\..\Model\QuivusModel\QuivusModel\QuivusModel.csproj", "{4FB08438-241D-4F0F-B826-A6ACC43CB5FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuivusSecurity.ServiceResponce", "ServiceResponce\QuivusSecurity.ServiceResponce.csproj", "{7E2E9771-E489-4A4A-B7FB-1A6834882D83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B0921CF-F350-4FE4-AB37-7665D5B205B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B0921CF-F350-4FE4-AB37-7665D5B205B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B0921CF-F350-4FE4-AB37-7665D5B205B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B0921CF-F350-4FE4-AB37-7665D5B205B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{517A7865-FF68-4F0A-9CCC-53221D9BE6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{517A7865-FF68-4F0A-9CCC-53221D9BE6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{517A7865-FF68-4F0A-9CCC-53221D9BE6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{517A7865-FF68-4F0A-9CCC-53221D9BE6C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90F9FE94-2BE6-4465-B4D2-150C0EB718EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F9FE94-2BE6-4465-B4D2-150C0EB718EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F9FE94-2BE6-4465-B4D2-150C0EB718EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F9FE94-2BE6-4465-B4D2-150C0EB718EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EBB3771-CA72-4415-B83F-4EFDCB935553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EBB3771-CA72-4415-B83F-4EFDCB935553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EBB3771-CA72-4415-B83F-4EFDCB935553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EBB3771-CA72-4415-B83F-4EFDCB935553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4121AAE-16B3-4140-B9A7-B160C8173BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4121AAE-16B3-4140-B9A7-B160C8173BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4121AAE-16B3-4140-B9A7-B160C8173BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4121AAE-16B3-4140-B9A7-B160C8173BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB08438-241D-4F0F-B826-A6ACC43CB5FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB08438-241D-4F0F-B826-A6ACC43CB5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB08438-241D-4F0F-B826-A6ACC43CB5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB08438-241D-4F0F-B826-A6ACC43CB5FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E2E9771-E489-4A4A-B7FB-1A6834882D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2E9771-E489-4A4A-B7FB-1A6834882D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2E9771-E489-4A4A-B7FB-1A6834882D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2E9771-E489-4A4A-B7FB-1A6834882D83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

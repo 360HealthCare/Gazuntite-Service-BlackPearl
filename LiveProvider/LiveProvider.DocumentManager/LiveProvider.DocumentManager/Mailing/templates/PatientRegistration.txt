@@ -1,0 +1,16 @@
+Dear {0},
+
+You are now registered user at Quivus Online Clinic.
+
+Your reference number is {1}, which is your MRN (Medical Record Number).
+
+You can access your online account at www.quivus.com.
+
+User name: {2}
+
+Password: {3}
+
+
+If you have any questions about your registration with , you are welcome to contact our customer support [support@quivus.com].
+
+This is an auto-generated email, please do not reply.

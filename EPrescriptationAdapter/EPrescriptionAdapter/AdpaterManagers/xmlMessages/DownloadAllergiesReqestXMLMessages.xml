@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RCExtRequest>
+
+  <Request>
+    <Command>update_allergy</Command>
+    <LastUpdateDate></LastUpdateDate>
+    <ReturnAllNDCIDs>y</ReturnAllNDCIDs>
+    <Patient>
+      <RcopiaID></RcopiaID>
+      <ExternalID></ExternalID>
+    </Patient>
+  </Request>
+</RCExtRequest>

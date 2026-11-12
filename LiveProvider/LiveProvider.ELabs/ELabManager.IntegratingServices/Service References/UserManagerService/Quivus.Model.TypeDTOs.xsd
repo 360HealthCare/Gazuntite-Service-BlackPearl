@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="AllergyTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllergyAgentId" type="xs:int" />
+          <xs:element minOccurs="0" name="AllergyAgentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllergyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllergyTypeIdSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="NKDA" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NdfRt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProblemType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RxNormCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Severity" type="xs:int" />
+          <xs:element minOccurs="0" name="SnomedCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SnomedDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniiCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AllergyTypeDTO" nillable="true" type="tns:AllergyTypeDTO" />
+  <xs:complexType name="SpecialityTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q2:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SpecialityName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpecialityTypeID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SpecialityTypeDTO" nillable="true" type="tns:SpecialityTypeDTO" />
+  <xs:complexType name="StatusTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q3:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StatusID" type="xs:int" />
+          <xs:element minOccurs="0" name="StatusName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StatusTypeDTO" nillable="true" type="tns:StatusTypeDTO" />
+  <xs:complexType name="UserTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q4:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsClinicUser" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsProvider" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="UserTypeName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserTypeDTO" nillable="true" type="tns:UserTypeDTO" />
+  <xs:complexType name="GenderTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q5:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GenderCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenderId" type="xs:int" />
+          <xs:element minOccurs="0" name="GenderName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GenderTypeDTO" nillable="true" type="tns:GenderTypeDTO" />
+  <xs:complexType name="PrefixTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q6:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PrefixCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrefixId" type="xs:int" />
+          <xs:element minOccurs="0" name="PrefixName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrefixTypeDTO" nillable="true" type="tns:PrefixTypeDTO" />
+  <xs:complexType name="ArrayOfSpecialityTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialityTypeDTO" nillable="true" type="tns:SpecialityTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpecialityTypeDTO" nillable="true" type="tns:ArrayOfSpecialityTypeDTO" />
+  <xs:complexType name="ArrayOfUserTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserTypeDTO" nillable="true" type="tns:UserTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserTypeDTO" nillable="true" type="tns:ArrayOfUserTypeDTO" />
+  <xs:complexType name="EthinicityTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q7:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EthinicityCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EthinicityId" type="xs:int" />
+          <xs:element minOccurs="0" name="EthinicityName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EthinicityTypeDTO" nillable="true" type="tns:EthinicityTypeDTO" />
+  <xs:complexType name="MaritalStatusTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q8:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MaritalStatusCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaritalStatusId" type="xs:int" />
+          <xs:element minOccurs="0" name="MaritalStatusName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MaritalStatusTypeDTO" nillable="true" type="tns:MaritalStatusTypeDTO" />
+  <xs:complexType name="OccupationTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q9:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OccupationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OccupationId" type="xs:int" />
+          <xs:element minOccurs="0" name="OccupationName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OccupationTypeDTO" nillable="true" type="tns:OccupationTypeDTO" />
+  <xs:complexType name="RaceTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q10:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RaceCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RaceId" type="xs:int" />
+          <xs:element minOccurs="0" name="RaceName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RaceTypeDTO" nillable="true" type="tns:RaceTypeDTO" />
+  <xs:complexType name="SmokingTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q11:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SmokingTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SmokingTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="SmokingTypeName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SmokingTypeDTO" nillable="true" type="tns:SmokingTypeDTO" />
+  <xs:complexType name="RelationshipTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q12:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RelationshipCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelationshipId" type="xs:int" />
+          <xs:element minOccurs="0" name="RelationshipName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RelationshipTypeDTO" nillable="true" type="tns:RelationshipTypeDTO" />
+  <xs:complexType name="ICDCodeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q13:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DiagnosisId" type="xs:int" />
+          <xs:element minOccurs="0" name="IcdCodeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IcdCodeIdSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="IcdCodeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsChronic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProblemType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNOMEDCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNOMEDDescription" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ICDCodeDTO" nillable="true" type="tns:ICDCodeDTO" />
+  <xs:complexType name="InsuranceNatureDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q14:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InsuranceNatureId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InsuranceNatureDTO" nillable="true" type="tns:InsuranceNatureDTO" />
+  <xs:complexType name="InsuranceTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q15:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InsuranceTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="InsuranceTypeName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InsuranceTypeDTO" nillable="true" type="tns:InsuranceTypeDTO" />
+  <xs:complexType name="LanguageAbilityModeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q16:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LangaugeAbilityModeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageAbilityModeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageAbilityModeId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LanguageAbilityModeDTO" nillable="true" type="tns:LanguageAbilityModeDTO" />
+  <xs:complexType name="ArrayOfImageTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImageTypeDTO" nillable="true" type="tns:ImageTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImageTypeDTO" nillable="true" type="tns:ArrayOfImageTypeDTO" />
+  <xs:complexType name="ImageTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q17:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ImageTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="TypeDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImageTypeDTO" nillable="true" type="tns:ImageTypeDTO" />
+  <xs:complexType name="ArrayOfModuleTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModuleTypeDTO" nillable="true" type="tns:ModuleTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModuleTypeDTO" nillable="true" type="tns:ArrayOfModuleTypeDTO" />
+  <xs:complexType name="ModuleTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q18:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModuleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModuleTypeId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModuleTypeDTO" nillable="true" type="tns:ModuleTypeDTO" />
+  <xs:complexType name="ArrayOfStatusTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatusTypeDTO" nillable="true" type="tns:StatusTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatusTypeDTO" nillable="true" type="tns:ArrayOfStatusTypeDTO" />
+  <xs:complexType name="ArrayOfEthinicityTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EthinicityTypeDTO" nillable="true" type="tns:EthinicityTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEthinicityTypeDTO" nillable="true" type="tns:ArrayOfEthinicityTypeDTO" />
+  <xs:complexType name="ArrayOfGenderTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GenderTypeDTO" nillable="true" type="tns:GenderTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGenderTypeDTO" nillable="true" type="tns:ArrayOfGenderTypeDTO" />
+  <xs:complexType name="ArrayOfInsuranceNatureDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InsuranceNatureDTO" nillable="true" type="tns:InsuranceNatureDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInsuranceNatureDTO" nillable="true" type="tns:ArrayOfInsuranceNatureDTO" />
+  <xs:complexType name="ArrayOfInsuranceTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InsuranceTypeDTO" nillable="true" type="tns:InsuranceTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInsuranceTypeDTO" nillable="true" type="tns:ArrayOfInsuranceTypeDTO" />
+  <xs:complexType name="ArrayOfLanguageAbilityModeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LanguageAbilityModeDTO" nillable="true" type="tns:LanguageAbilityModeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLanguageAbilityModeDTO" nillable="true" type="tns:ArrayOfLanguageAbilityModeDTO" />
+  <xs:complexType name="ArrayOfLanguageTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LanguageTypeDTO" nillable="true" type="tns:LanguageTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLanguageTypeDTO" nillable="true" type="tns:ArrayOfLanguageTypeDTO" />
+  <xs:complexType name="LanguageTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q19:QuivusBaseTypeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+          <xs:element minOccurs="0" name="LanguageName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LanguageTypeDTO" nillable="true" type="tns:LanguageTypeDTO" />
+  <xs:complexType name="ArrayOfMaritalStatusTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaritalStatusTypeDTO" nillable="true" type="tns:MaritalStatusTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaritalStatusTypeDTO" nillable="true" type="tns:ArrayOfMaritalStatusTypeDTO" />
+  <xs:complexType name="ArrayOfOccupationTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OccupationTypeDTO" nillable="true" type="tns:OccupationTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOccupationTypeDTO" nillable="true" type="tns:ArrayOfOccupationTypeDTO" />
+  <xs:complexType name="ArrayOfPrefixTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrefixTypeDTO" nillable="true" type="tns:PrefixTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrefixTypeDTO" nillable="true" type="tns:ArrayOfPrefixTypeDTO" />
+  <xs:complexType name="ArrayOfRaceTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RaceTypeDTO" nillable="true" type="tns:RaceTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRaceTypeDTO" nillable="true" type="tns:ArrayOfRaceTypeDTO" />
+  <xs:complexType name="ArrayOfRelationshipTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RelationshipTypeDTO" nillable="true" type="tns:RelationshipTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRelationshipTypeDTO" nillable="true" type="tns:ArrayOfRelationshipTypeDTO" />
+  <xs:complexType name="ArrayOfSmokingTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SmokingTypeDTO" nillable="true" type="tns:SmokingTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSmokingTypeDTO" nillable="true" type="tns:ArrayOfSmokingTypeDTO" />
+</xs:schema>

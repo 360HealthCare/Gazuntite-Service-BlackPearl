@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8BBC7706-B30E-4DC9-9862-175F10EF6C7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Visit.Business</RootNamespace>
+    <AssemblyName>Visit.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ThirdPartyLibraries\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ThirdPartyLibraries\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\ViewBackground\Impl\ViewBackgroundManagerImpl.cs" />
+    <Compile Include="BL\ViewBackground\IViewBackgroundManager.cs" />
+    <Compile Include="Common\VisitStaticDataManager.cs" />
+    <Compile Include="BL\Encounter\Impl\VisitManagerImpl.cs" />
+    <Compile Include="BL\Encounter\IVisitManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BL\QuickInput\Impl\QuickInputManagerImpl.cs" />
+    <Compile Include="BL\ViewBackground\IQuickInputManager.cs" />
+    <Compile Include="Validators\QBaseValidator.cs" />
+    <Compile Include="Validators\QuickInput\Assessment\DiagnosisValidator.cs" />
+    <Compile Include="Validators\QuickInput\Assessment\FollowupInstructionValidator.cs" />
+    <Compile Include="Validators\QuickInput\Assessment\FollowUpValidator.cs" />
+    <Compile Include="Validators\QuickInput\Assessment\ProcedureValidator.cs" />
+    <Compile Include="Validators\QuickInput\Assessment\RecommendationValidator.cs" />
+    <Compile Include="Validators\QuickInput\Physical\HPI\HPIValidator.cs" />
+    <Compile Include="Validators\QuickInput\Physical\Labs\InHouseLabValidator.cs" />
+    <Compile Include="Validators\QuickInput\Physical\Labs\LabValidator.cs" />
+    <Compile Include="Validators\QuickInput\Physical\Physicals\PhysicalValidator.cs" />
+    <Compile Include="Validators\QuickInput\Physical\Prescription\PrescriptionValidator.cs" />
+    <Compile Include="Validators\QuickInput\Physical\ROS\ROSValidator.cs" />
+    <Compile Include="Validators\QuickInput\Physical\Vital\VitalValidator.cs" />
+    <Compile Include="Validators\QuickInput\PMH\Allergy\AllergyValidator.cs" />
+    <Compile Include="Validators\QuickInput\PMH\ChronicMedication\ChronicMedicationValidator.cs" />
+    <Compile Include="Validators\QuickInput\PMH\ComprehensiveHistory\ComprehensiveValidator.cs" />
+    <Compile Include="Validators\QuickInput\PMH\ComprehensiveHistory\SocialAddictionValidator.cs" />
+    <Compile Include="Validators\QuickInput\PMH\ComprehensiveHistory\SocialValidator.cs" />
+    <Compile Include="Validators\QuickInput\PMH\Medication\MedicationValidator.cs" />
+    <Compile Include="Validators\VisitValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Model\QuivusModel\QuivusModel\QuivusModel.csproj">
+      <Project>{4FB08438-241D-4F0F-B826-A6ACC43CB5FF}</Project>
+      <Name>QuivusModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Utility\QuivusUtility\QuivusUtility\QuivusUtility.csproj">
+      <Project>{52A05B07-376A-4756-A2CC-CCFC7A387226}</Project>
+      <Name>QuivusUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Visit.DataAccess\Visit.DataAccess.csproj">
+      <Project>{F554398B-E94A-4086-B973-4F8699EE1E22}</Project>
+      <Name>Visit.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

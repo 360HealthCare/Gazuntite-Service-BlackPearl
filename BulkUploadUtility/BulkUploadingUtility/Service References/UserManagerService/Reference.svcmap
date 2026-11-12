@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8f927171-5138-4d88-a644-252322de77cf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="6442ae62-ec28-4d5a-baf2-726a09422b50" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="7d30c037-dbb7-4754-9bb9-33ab251afea8" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="e8750fff-cb36-4c49-9550-53f05c5b7e51" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.User.Patient.xsd" MetadataType="Schema" ID="d32404e2-9f1a-401a-b7d9-d5786b2b8b3b" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.xsd" MetadataType="Schema" ID="ba3add14-5139-427b-803f-30bf8664ccde" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.TypeDTOs.xsd" MetadataType="Schema" ID="19ef6633-e458-4e3e-bf0b-542b0102d5b8" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Utility.Fault.xsd" MetadataType="Schema" ID="fff69662-ba43-4bf5-a112-a0008500d85b" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.AddressBook.xsd" MetadataType="Schema" ID="30988077-cba0-487c-a999-4909021ff9a5" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="9d0fda85-a82a-4fec-a098-534ed4f98d13" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.Image.xsd" MetadataType="Schema" ID="c99bda1d-b33e-4098-a356-fdd7be4c3270" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.Insurance.xsd" MetadataType="Schema" ID="73267508-3b3f-4cab-8e9c-ef75c4f48218" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.User.xsd" MetadataType="Schema" ID="2d552219-fdf3-49e0-abdf-5d7a68d0aece" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.PatientProfileCustomization.xsd" MetadataType="Schema" ID="fc38e852-33b7-4877-9863-6fa582002791" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="QuivusModel.User.Patient.xsd" MetadataType="Schema" ID="ff998a71-8245-4d3d-b898-6f7810197bc5" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="QuivusModel.User.xsd" MetadataType="Schema" ID="36b9d7cf-b122-4cf2-86b3-5b8fcb983caf" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.Common.xsd" MetadataType="Schema" ID="26a207ab-242d-465d-b10b-c2179cafd004" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.Clinic.xsd" MetadataType="Schema" ID="6550f1ba-35c3-4d7f-ba35-f5a1b03d4734" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="QuivusModel.Common.xsd" MetadataType="Schema" ID="4fad2839-b2ec-4692-b2a0-85f1dba618ca" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.QuickLink.xsd" MetadataType="Schema" ID="8f0cb8fa-fffb-416b-8a60-771e600af0fa" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.SearchEngine.xsd" MetadataType="Schema" ID="ae32e9d5-c6c4-47af-bf87-9e21b5d5edc6" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.Search.xsd" MetadataType="Schema" ID="f9307ca4-0630-4dc1-a5fb-99b8c5e7ab23" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+    <MetadataFile FileName="Quivus.Model.RecentPatient.xsd" MetadataType="Schema" ID="a6dc28eb-e3fe-45dc-a76f-364173317d8e" SourceId="1" SourceUrl="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

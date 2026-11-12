@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Labs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Labs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd29" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.Labs" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs" />
+  <xs:complexType name="ArrayOfInHouseLabDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InHouseLabDTO" nillable="true" type="tns:InHouseLabDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInHouseLabDTO" nillable="true" type="tns:ArrayOfInHouseLabDTO" />
+  <xs:complexType name="InHouseLabDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DictationID" type="ser:guid" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.Labs" minOccurs="0" name="InHouseLabTestType" nillable="true" type="q2:InHouseLabTestTypeDTO" />
+          <xs:element minOccurs="0" name="IsRecordEditable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModifiedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="NoteSubject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientID" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientInHouseLabTestID" type="xs:int" />
+          <xs:element minOccurs="0" name="ResultAttachment" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="TestResult" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VisitID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InHouseLabDTO" nillable="true" type="tns:InHouseLabDTO" />
+  <xs:complexType name="ArrayOfLabDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabDTO" nillable="true" type="tns:LabDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabDTO" nillable="true" type="tns:ArrayOfLabDTO" />
+  <xs:complexType name="LabDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q3:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CollectionDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictationID" type="ser:guid" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs" minOccurs="0" name="ICDCode" nillable="true" type="q4:ICDCodeDTO" />
+          <xs:element minOccurs="0" name="IsFasting" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsLabIn" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsRecordEditable" type="xs:boolean" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.Labs" minOccurs="0" name="LIONICLabTestType" nillable="true" type="q5:LIONICLabTestTypeDTO" />
+          <xs:element minOccurs="0" name="LabID" type="xs:int" />
+          <xs:element minOccurs="0" name="LabNote" nillable="true" type="xs:string" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.Labs" minOccurs="0" name="LabTestOrderMethodType" nillable="true" type="q6:LabTestOrderMethodTypeDTO" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.Labs" minOccurs="0" name="LabTestPriorityType" nillable="true" type="q7:LabTestPriorityTypeDTO" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.Labs" minOccurs="0" name="LabTestSpecimenType" nillable="true" type="q8:LabTestSpecimenTypeDTO" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.Labs" minOccurs="0" name="LabTestType" nillable="true" type="q9:LabTestTypeDTO" />
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs.QuickInputTypeDTOs.Physical.Labs" minOccurs="0" name="LabType" nillable="true" type="q10:LabTypeDTO" />
+          <xs:element minOccurs="0" name="ModifiedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="NoteSubject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Onset" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientLabID" type="xs:int" />
+          <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Specimen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" type="xs:int" />
+          <xs:element minOccurs="0" name="VisitDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VisitID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LabDTO" nillable="true" type="tns:LabDTO" />
+</xs:schema>

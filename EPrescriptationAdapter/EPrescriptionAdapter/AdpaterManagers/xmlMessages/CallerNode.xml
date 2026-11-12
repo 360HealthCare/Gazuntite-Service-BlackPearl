@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VendorInfo>
+  <Caller>
+    <VendorName></VendorName>
+    <VendorPassword></VendorPassword>
+    <Application></Application>
+    <Version></Version>
+    <PracticeName></PracticeName>
+    <Station></Station>
+  </Caller>
+  <SystemName></SystemName>
+  <RcopiaPracticeUsername></RcopiaPracticeUsername>
+</VendorInfo>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.Clinic" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.Clinic" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ClinicBranchDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClinicBranchIdSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="ClinicBranchName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClinicBranchDTO" nillable="true" type="tns:ClinicBranchDTO" />
+  <xs:complexType name="ArrayOfClinicBranchDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClinicBranchDTO" nillable="true" type="tns:ClinicBranchDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClinicBranchDTO" nillable="true" type="tns:ArrayOfClinicBranchDTO" />
+</xs:schema>

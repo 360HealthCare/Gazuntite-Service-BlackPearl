@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="EprescriptionService.Service.EprescriptionAdapterService" CodeBehind="EprescriptionAdapterService.svc.cs" %>

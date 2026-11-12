@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BD08545-740E-45B1-89BA-F784F725F333}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quivus.Billing.Business1</RootNamespace>
+    <AssemblyName>Quivus.Billing.Business1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressBookBL\Impl\AddressBookBLImpl.cs" />
+    <Compile Include="AddressBookBL\IAddressBookBL.cs" />
+    <Compile Include="BL\IBillingManager.cs" />
+    <Compile Include="BL\Impl\BillingManagerImpl.cs" />
+    <Compile Include="Common\BillingStaticDataManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceFactory\ServiceReferenceFactory.cs" />
+    <Compile Include="SuperBill\Impl\SuperBillImpl.cs" />
+    <Compile Include="SuperBill\ISuperBill.cs" />
+    <Compile Include="UserBL\Impl\UserBLImpl.cs" />
+    <Compile Include="UserBL\IUserBL.cs" />
+    <Compile Include="VisiBL\Impl\VisitBLImpl.cs" />
+    <Compile Include="VisiBL\IVisitBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\QuivusModel\QuivusModel\QuivusModel.csproj">
+      <Project>{4FB08438-241D-4F0F-B826-A6ACC43CB5FF}</Project>
+      <Name>QuivusModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\QuivusUtility\QuivusUtility\QuivusUtility.csproj">
+      <Project>{52A05B07-376A-4756-A2CC-CCFC7A387226}</Project>
+      <Name>QuivusUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quivus.Billing.DataAccess\Quivus.Billing.DataAccess.csproj">
+      <Project>{64C6386C-4D91-4CB5-A19E-FC5AE43D548E}</Project>
+      <Name>Quivus.Billing.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuivusBilling.IntegratedServices\QuivusBilling.IntegratedServices.csproj">
+      <Project>{33423AAF-AA00-498E-8C01-780A6533B845}</Project>
+      <Name>QuivusBilling.IntegratedServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceCustomResponse\QuivusBilling.ServiceResponse.csproj">
+      <Project>{53769283-730A-471A-BBF4-64DC21F24CB6}</Project>
+      <Name>QuivusBilling.ServiceResponse</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\Quivus.Model.Common.AllergySearchDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.Common.ICDCodeSearchDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.Common.LoginDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.Common.ProfileStaticDataDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.Common.RegisterationStaticDataDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.PatientProfileCustomization.PatientProfileAllergyDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.PatientProfileCustomization.PatientProfileChronicMedicationDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.PatientProfileCustomization.PatientProfileDiagnosisDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.PatientProfileCustomization.PatientProfileImmuniztionDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.PatientProfileCustomization.PatientProfileInsuranceDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.PatientProfileCustomization.PatientProfileTaggedDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.QuickLink.QuickLinkDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.RecentPatient.RecentPatientDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.Search.ContactSearchDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.Search.PatientSearchResultDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.SearchEngine.SearchEngineDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.TypeDTOs.ImageTypeDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.TypeDTOs.ModuleTypeDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.TypeDTOs.SpecialityTypeDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.User.BaseUserDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.User.Patient.PatientAllergyDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.User.Patient.PatientDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.User.Patient.PatientProfileCompleteSettingDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.User.Patient.PatientProfileDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.User.UserBasicInfoDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.User.UserDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.User.UserVerificationDTO.datasource" />
+    <None Include="Properties\DataSources\QuivusModel.Association.PatientProviderAssociationDTO.datasource" />
+    <None Include="Properties\DataSources\QuivusModel.Clinic.ClinicRoomDTO.datasource" />
+    <None Include="Properties\DataSources\QuivusModel.Common.ProviderSearchDTO.datasource" />
+    <None Include="Properties\DataSources\QuivusModel.Common.StationDTO.datasource" />
+    <None Include="Properties\DataSources\QuivusModel.User.ClinicUser.ClinicUserDTO.datasource" />
+    <None Include="Properties\DataSources\QuivusModel.User.Patient.ExternalPatientDTO.datasource" />
+    <None Include="Properties\DataSources\QuivusModel.User.Patient.PatientBasicInfoDTO.datasource" />
+    <None Include="Properties\DataSources\QuivusModel.User.Patient.PatientUserInfo.datasource" />
+    <None Include="Properties\DataSources\QuivusModel.User.ProviderDTO.datasource" />
+    <None Include="Properties\DataSources\QuivusModel.User.WorkingHourDTO.datasource" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

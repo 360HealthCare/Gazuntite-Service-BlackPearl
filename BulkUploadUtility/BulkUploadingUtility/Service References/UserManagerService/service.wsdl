@@ -1,0 +1,1591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserManagerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.User.Patient" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.TypeDTOs" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.AddressBook" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.Image" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.Insurance" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.User" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.PatientProfileCustomization" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/QuivusModel.User.Patient" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/QuivusModel.User" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.Common" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.Clinic" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/QuivusModel.Common" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickLink" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.SearchEngine" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.Search" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.RecentPatient" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserManagerService_LoadPatientAllergyInfoByPatientIdForCompleteProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientAllergyInfoByPatientIdForCompleteProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientAllergyInfoByPatientIdForCompleteProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientAllergyInfoByPatientIdForCompleteProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientAllergyInfoByPatientIdForCompleteProfile_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q1:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_VerifyUserEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserEmail" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_VerifyUserEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_VerifyUserEmail_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q2:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_DateTestService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DateTestService" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_DateTestService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DateTestServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadClinicBranchIdByClinicBranchName_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadClinicBranchIdByClinicBranchName" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadClinicBranchIdByClinicBranchName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadClinicBranchIdByClinicBranchNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadClinicBranchIdByClinicBranchName_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q3:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientAllergy_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientAllergy" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientAllergy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientAllergyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientAllergy_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q4:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientCompleteProfileForClinic_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientCompleteProfileForClinic" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientCompleteProfileForClinic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientCompleteProfileForClinicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientCompleteProfileForClinic_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q5:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetUserEmailByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserEmailByUserId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetUserEmailByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserEmailByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetUserEmailByUserId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q6:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientProfileInfoForProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientProfileInfoForProvider" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientProfileInfoForProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientProfileInfoForProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientProfileInfoForProvider_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q7:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientAllergiesForProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientAllergiesForProvider" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientAllergiesForProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientAllergiesForProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientAllergiesForProvider_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q8:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientDiagnosisForProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientDiagnosisForProvider" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientDiagnosisForProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientDiagnosisForProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientDiagnosisForProvider_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q9:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientImmunizationForProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientImmunizationForProvider" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientImmunizationForProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientImmunizationForProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientImmunizationForProvider_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q10:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientMedicationForProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientMedicationForProvider" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientMedicationForProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientMedicationForProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientMedicationForProvider_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q11:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientInsuranceForProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientInsuranceForProvider" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientInsuranceForProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientInsuranceForProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientInsuranceForProvider_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q12:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadImageTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadImageTypes" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadImageTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadImageTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadImageTypes_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q13:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetPartyGuidByProfileIdAndTypeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartyGuidByProfileIdAndTypeId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetPartyGuidByProfileIdAndTypeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartyGuidByProfileIdAndTypeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetPartyGuidByProfileIdAndTypeId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q14:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetUserBasicInfoById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBasicInfoById" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetUserBasicInfoById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBasicInfoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetUserBasicInfoById_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q15:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadModuleTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadModuleTypes" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadModuleTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadModuleTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadModuleTypes_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q16:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_IsProviderAtClinic_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsProviderAtClinic" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_IsProviderAtClinic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsProviderAtClinicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_IsProviderAtClinic_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q17:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetPartyGuidByPatientIdAndPartyTypeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartyGuidByPatientIdAndPartyTypeId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetPartyGuidByPatientIdAndPartyTypeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartyGuidByPatientIdAndPartyTypeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetPartyGuidByPatientIdAndPartyTypeId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q18:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManagePatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePatient" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManagePatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManagePatient_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q19:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientByPatientId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientByPatientId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientByPatientId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientByPatientIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientByPatientId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q20:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientBasicInfoByPatientId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientBasicInfoByPatientId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientBasicInfoByPatientId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientBasicInfoByPatientIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientBasicInfoByPatientId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q21:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientUserInfoByQuivusId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientUserInfoByQuivusId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientUserInfoByQuivusId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientUserInfoByQuivusIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientUserInfoByQuivusId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q22:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_VerifyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_VerifyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_VerifyUser_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q23:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadBaseUserByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadBaseUserByUserId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadBaseUserByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadBaseUserByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadBaseUserByUserId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q24:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadQuivusIdByPatientId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadQuivusIdByPatientId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadQuivusIdByPatientId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadQuivusIdByPatientIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadQuivusIdByPatientId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q25:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadRcopiaIdByPatientId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRcopiaIdByPatientId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadRcopiaIdByPatientId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRcopiaIdByPatientIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadRcopiaIdByPatientId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q26:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_UpdatePatientEPrescriptionDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatientEPrescriptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_UpdatePatientEPrescriptionDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatientEPrescriptionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_UpdatePatientEPrescriptionDetails_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q27:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadExternalPatients_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadExternalPatients" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadExternalPatients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadExternalPatientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadExternalPatients_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q28:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_UpdatePatientRCopiaId_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatientRCopiaId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_UpdatePatientRCopiaId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatientRCopiaIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_UpdatePatientRCopiaId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q29:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadAllProviderByClinicBranchId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllProviderByClinicBranchId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadAllProviderByClinicBranchId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllProviderByClinicBranchIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadAllProviderByClinicBranchId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q30:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientBaseUserInfoByPatientIdForCompleteProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientBaseUserInfoByPatientIdForCompleteProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientBaseUserInfoByPatientIdForCompleteProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientBaseUserInfoByPatientIdForCompleteProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientBaseUserInfoByPatientIdForCompleteProfile_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q31:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_PingService_InputMessage">
+    <wsdl:part name="parameters" element="tns:PingService" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_PingService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_PingService_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q32:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_AuthenticateUser_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q33:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LogLoginHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogLoginHistory" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LogLoginHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogLoginHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LogLoginHistory_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q34:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadUserDefaultQuickLinksbyLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadUserDefaultQuickLinksbyLocation" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadUserDefaultQuickLinksbyLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadUserDefaultQuickLinksbyLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadUserDefaultQuickLinksbyLocation_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q35:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadUserSearchEnginebyLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadUserSearchEnginebyLocation" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadUserSearchEnginebyLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadUserSearchEnginebyLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadUserSearchEnginebyLocation_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q36:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadAllSearchEngines_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllSearchEngines" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadAllSearchEngines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllSearchEnginesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadAllSearchEngines_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q37:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SetDefaultSearchEngine_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDefaultSearchEngine" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SetDefaultSearchEngine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDefaultSearchEngineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SetDefaultSearchEngine_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q38:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManageUserSearchEngine_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManageUserSearchEngine" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManageUserSearchEngine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManageUserSearchEngineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManageUserSearchEngine_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q39:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ClearUserAddedSearchEngines_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearUserAddedSearchEngines" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ClearUserAddedSearchEngines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearUserAddedSearchEnginesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ClearUserAddedSearchEngines_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q40:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadUsersByClinicBranchID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadUsersByClinicBranchID" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadUsersByClinicBranchID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadUsersByClinicBranchIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadUsersByClinicBranchID_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q41:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_RegisterNewUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_RegisterNewUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_RegisterNewUser_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q42:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetRegisterationStaticData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterationStaticData" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetRegisterationStaticData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterationStaticDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetRegisterationStaticData_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q43:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SearchAllergyTypeByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAllergyTypeByName" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SearchAllergyTypeByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAllergyTypeByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SearchAllergyTypeByName_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q44:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SearchICDCodeByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchICDCodeByCode" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SearchICDCodeByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchICDCodeByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SearchICDCodeByCode_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q45:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientBasicProfileAndLangauge_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientBasicProfileAndLangauge" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientBasicProfileAndLangauge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientBasicProfileAndLangaugeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientBasicProfileAndLangauge_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q46:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientGurantor_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientGurantor" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientGurantor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientGurantorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientGurantor_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q47:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientHealthInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientHealthInfo" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientHealthInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientHealthInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientHealthInfo_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q48:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientInsuranceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientInsuranceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientInsuranceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientInsuranceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SavePatientInsuranceInfo_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q49:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_RegisterBaseUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterBaseUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_RegisterBaseUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterBaseUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_RegisterBaseUser_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q50:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManagePatientEmergencyContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePatientEmergencyContact" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManagePatientEmergencyContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePatientEmergencyContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManagePatientEmergencyContact_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q51:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetRegisterationStaticDataByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterationStaticDataByType" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetRegisterationStaticDataByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterationStaticDataByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_GetRegisterationStaticDataByType_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q52:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SearchPatientbyClinicIdAndSearchString_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPatientbyClinicIdAndSearchString" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SearchPatientbyClinicIdAndSearchString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPatientbyClinicIdAndSearchStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SearchPatientbyClinicIdAndSearchString_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q53:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SaveRecentPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRecentPatient" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SaveRecentPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRecentPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_SaveRecentPatient_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q54:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadRecentPatientsByProviderIdAndBranchId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRecentPatientsByProviderIdAndBranchId" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadRecentPatientsByProviderIdAndBranchId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRecentPatientsByProviderIdAndBranchIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadRecentPatientsByProviderIdAndBranchId_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q55:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientProfileSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientProfileSettings" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientProfileSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientProfileSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientProfileSettings_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q56:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientProfileSettingsBySection_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientProfileSettingsBySection" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientProfileSettingsBySection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientProfileSettingsBySectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadPatientProfileSettingsBySection_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q57:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManagePatientProfileSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePatientProfileSettings" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManagePatientProfileSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePatientProfileSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_ManagePatientProfileSettings_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q58:QuivusFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadProfileStaticData_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadProfileStaticData" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadProfileStaticData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadProfileStaticDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagerService_LoadProfileStaticData_QuivusFaultFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/Quivus.Utility.Fault" name="detail" element="q59:QuivusFault" />
+  </wsdl:message>
+  <wsdl:portType name="IUserManagerService">
+    <wsdl:operation name="LoadPatientAllergyInfoByPatientIdForCompleteProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientAllergyInfoByPatientIdForCompleteProfile" message="tns:IUserManagerService_LoadPatientAllergyInfoByPatientIdForCompleteProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientAllergyInfoByPatientIdForCompleteProfileResponse" message="tns:IUserManagerService_LoadPatientAllergyInfoByPatientIdForCompleteProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientAllergyInfoByPatientIdForCompleteProfileQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientAllergyInfoByPatientIdForCompleteProfile_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/VerifyUserEmail" message="tns:IUserManagerService_VerifyUserEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/VerifyUserEmailResponse" message="tns:IUserManagerService_VerifyUserEmail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/VerifyUserEmailQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_VerifyUserEmail_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DateTestService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/DateTestService" message="tns:IUserManagerService_DateTestService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/DateTestServiceResponse" message="tns:IUserManagerService_DateTestService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadClinicBranchIdByClinicBranchName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadClinicBranchIdByClinicBranchName" message="tns:IUserManagerService_LoadClinicBranchIdByClinicBranchName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadClinicBranchIdByClinicBranchNameResponse" message="tns:IUserManagerService_LoadClinicBranchIdByClinicBranchName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadClinicBranchIdByClinicBranchNameQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadClinicBranchIdByClinicBranchName_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientAllergy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientAllergy" message="tns:IUserManagerService_SavePatientAllergy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientAllergyResponse" message="tns:IUserManagerService_SavePatientAllergy_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientAllergyQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_SavePatientAllergy_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientCompleteProfileForClinic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientCompleteProfileForClinic" message="tns:IUserManagerService_LoadPatientCompleteProfileForClinic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientCompleteProfileForClinicResponse" message="tns:IUserManagerService_LoadPatientCompleteProfileForClinic_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientCompleteProfileForClinicQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientCompleteProfileForClinic_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserEmailByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/GetUserEmailByUserId" message="tns:IUserManagerService_GetUserEmailByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/GetUserEmailByUserIdResponse" message="tns:IUserManagerService_GetUserEmailByUserId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/GetUserEmailByUserIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_GetUserEmailByUserId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientProfileInfoForProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientProfileInfoForProvider" message="tns:IUserManagerService_LoadPatientProfileInfoForProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientProfileInfoForProviderResponse" message="tns:IUserManagerService_LoadPatientProfileInfoForProvider_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientProfileInfoForProviderQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientProfileInfoForProvider_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientAllergiesForProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientAllergiesForProvider" message="tns:IUserManagerService_LoadPatientAllergiesForProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientAllergiesForProviderResponse" message="tns:IUserManagerService_LoadPatientAllergiesForProvider_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientAllergiesForProviderQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientAllergiesForProvider_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientDiagnosisForProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientDiagnosisForProvider" message="tns:IUserManagerService_LoadPatientDiagnosisForProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientDiagnosisForProviderResponse" message="tns:IUserManagerService_LoadPatientDiagnosisForProvider_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientDiagnosisForProviderQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientDiagnosisForProvider_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientImmunizationForProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientImmunizationForProvider" message="tns:IUserManagerService_LoadPatientImmunizationForProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientImmunizationForProviderResponse" message="tns:IUserManagerService_LoadPatientImmunizationForProvider_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientImmunizationForProviderQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientImmunizationForProvider_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientMedicationForProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientMedicationForProvider" message="tns:IUserManagerService_LoadPatientMedicationForProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientMedicationForProviderResponse" message="tns:IUserManagerService_LoadPatientMedicationForProvider_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientMedicationForProviderQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientMedicationForProvider_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientInsuranceForProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientInsuranceForProvider" message="tns:IUserManagerService_LoadPatientInsuranceForProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientInsuranceForProviderResponse" message="tns:IUserManagerService_LoadPatientInsuranceForProvider_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientInsuranceForProviderQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientInsuranceForProvider_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadImageTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadImageTypes" message="tns:IUserManagerService_LoadImageTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadImageTypesResponse" message="tns:IUserManagerService_LoadImageTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadImageTypesQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadImageTypes_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartyGuidByProfileIdAndTypeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/GetPartyGuidByProfileIdAndTypeId" message="tns:IUserManagerService_GetPartyGuidByProfileIdAndTypeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/GetPartyGuidByProfileIdAndTypeIdResponse" message="tns:IUserManagerService_GetPartyGuidByProfileIdAndTypeId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/GetPartyGuidByProfileIdAndTypeIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_GetPartyGuidByProfileIdAndTypeId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBasicInfoById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/GetUserBasicInfoById" message="tns:IUserManagerService_GetUserBasicInfoById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/GetUserBasicInfoByIdResponse" message="tns:IUserManagerService_GetUserBasicInfoById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/GetUserBasicInfoByIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_GetUserBasicInfoById_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadModuleTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadModuleTypes" message="tns:IUserManagerService_LoadModuleTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadModuleTypesResponse" message="tns:IUserManagerService_LoadModuleTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadModuleTypesQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadModuleTypes_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsProviderAtClinic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/IsProviderAtClinic" message="tns:IUserManagerService_IsProviderAtClinic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/IsProviderAtClinicResponse" message="tns:IUserManagerService_IsProviderAtClinic_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/IsProviderAtClinicQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_IsProviderAtClinic_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartyGuidByPatientIdAndPartyTypeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/GetPartyGuidByPatientIdAndPartyTypeId" message="tns:IUserManagerService_GetPartyGuidByPatientIdAndPartyTypeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/GetPartyGuidByPatientIdAndPartyTypeIdResponse" message="tns:IUserManagerService_GetPartyGuidByPatientIdAndPartyTypeId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/GetPartyGuidByPatientIdAndPartyTypeIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_GetPartyGuidByPatientIdAndPartyTypeId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManagePatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/ManagePatient" message="tns:IUserManagerService_ManagePatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/ManagePatientResponse" message="tns:IUserManagerService_ManagePatient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/ManagePatientQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_ManagePatient_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientByPatientId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientByPatientId" message="tns:IUserManagerService_LoadPatientByPatientId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientByPatientIdResponse" message="tns:IUserManagerService_LoadPatientByPatientId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientByPatientIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientByPatientId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientBasicInfoByPatientId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientBasicInfoByPatientId" message="tns:IUserManagerService_LoadPatientBasicInfoByPatientId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientBasicInfoByPatientIdResponse" message="tns:IUserManagerService_LoadPatientBasicInfoByPatientId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientBasicInfoByPatientIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientBasicInfoByPatientId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientUserInfoByQuivusId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientUserInfoByQuivusId" message="tns:IUserManagerService_LoadPatientUserInfoByQuivusId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientUserInfoByQuivusIdResponse" message="tns:IUserManagerService_LoadPatientUserInfoByQuivusId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientUserInfoByQuivusIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientUserInfoByQuivusId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/VerifyUser" message="tns:IUserManagerService_VerifyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/VerifyUserResponse" message="tns:IUserManagerService_VerifyUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/VerifyUserQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_VerifyUser_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadBaseUserByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadBaseUserByUserId" message="tns:IUserManagerService_LoadBaseUserByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadBaseUserByUserIdResponse" message="tns:IUserManagerService_LoadBaseUserByUserId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadBaseUserByUserIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadBaseUserByUserId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadQuivusIdByPatientId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadQuivusIdByPatientId" message="tns:IUserManagerService_LoadQuivusIdByPatientId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadQuivusIdByPatientIdResponse" message="tns:IUserManagerService_LoadQuivusIdByPatientId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadQuivusIdByPatientIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadQuivusIdByPatientId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRcopiaIdByPatientId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadRcopiaIdByPatientId" message="tns:IUserManagerService_LoadRcopiaIdByPatientId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadRcopiaIdByPatientIdResponse" message="tns:IUserManagerService_LoadRcopiaIdByPatientId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadRcopiaIdByPatientIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadRcopiaIdByPatientId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePatientEPrescriptionDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/UpdatePatientEPrescriptionDetails" message="tns:IUserManagerService_UpdatePatientEPrescriptionDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/UpdatePatientEPrescriptionDetailsResponse" message="tns:IUserManagerService_UpdatePatientEPrescriptionDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/UpdatePatientEPrescriptionDetailsQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_UpdatePatientEPrescriptionDetails_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadExternalPatients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadExternalPatients" message="tns:IUserManagerService_LoadExternalPatients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadExternalPatientsResponse" message="tns:IUserManagerService_LoadExternalPatients_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadExternalPatientsQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadExternalPatients_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePatientRCopiaId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/UpdatePatientRCopiaId" message="tns:IUserManagerService_UpdatePatientRCopiaId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/UpdatePatientRCopiaIdResponse" message="tns:IUserManagerService_UpdatePatientRCopiaId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/UpdatePatientRCopiaIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_UpdatePatientRCopiaId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllProviderByClinicBranchId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadAllProviderByClinicBranchId" message="tns:IUserManagerService_LoadAllProviderByClinicBranchId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadAllProviderByClinicBranchIdResponse" message="tns:IUserManagerService_LoadAllProviderByClinicBranchId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadAllProviderByClinicBranchIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadAllProviderByClinicBranchId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientBaseUserInfoByPatientIdForCompleteProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientBaseUserInfoByPatientIdForCompleteProfile" message="tns:IUserManagerService_LoadPatientBaseUserInfoByPatientIdForCompleteProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientBaseUserInfoByPatientIdForCompleteProfileResponse" message="tns:IUserManagerService_LoadPatientBaseUserInfoByPatientIdForCompleteProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientBaseUserInfoByPatientIdForCompleteProfileQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientBaseUserInfoByPatientIdForCompleteProfile_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PingService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/PingService" message="tns:IUserManagerService_PingService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/PingServiceResponse" message="tns:IUserManagerService_PingService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/PingServiceQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_PingService_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/AuthenticateUser" message="tns:IUserManagerService_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/AuthenticateUserResponse" message="tns:IUserManagerService_AuthenticateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/AuthenticateUserQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_AuthenticateUser_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogLoginHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LogLoginHistory" message="tns:IUserManagerService_LogLoginHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LogLoginHistoryResponse" message="tns:IUserManagerService_LogLoginHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LogLoginHistoryQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LogLoginHistory_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserDefaultQuickLinksbyLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadUserDefaultQuickLinksbyLocation" message="tns:IUserManagerService_LoadUserDefaultQuickLinksbyLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadUserDefaultQuickLinksbyLocationResponse" message="tns:IUserManagerService_LoadUserDefaultQuickLinksbyLocation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadUserDefaultQuickLinksbyLocationQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadUserDefaultQuickLinksbyLocation_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserSearchEnginebyLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadUserSearchEnginebyLocation" message="tns:IUserManagerService_LoadUserSearchEnginebyLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadUserSearchEnginebyLocationResponse" message="tns:IUserManagerService_LoadUserSearchEnginebyLocation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadUserSearchEnginebyLocationQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadUserSearchEnginebyLocation_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllSearchEngines">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadAllSearchEngines" message="tns:IUserManagerService_LoadAllSearchEngines_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadAllSearchEnginesResponse" message="tns:IUserManagerService_LoadAllSearchEngines_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadAllSearchEnginesQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadAllSearchEngines_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDefaultSearchEngine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/SetDefaultSearchEngine" message="tns:IUserManagerService_SetDefaultSearchEngine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/SetDefaultSearchEngineResponse" message="tns:IUserManagerService_SetDefaultSearchEngine_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/SetDefaultSearchEngineQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_SetDefaultSearchEngine_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManageUserSearchEngine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/ManageUserSearchEngine" message="tns:IUserManagerService_ManageUserSearchEngine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/ManageUserSearchEngineResponse" message="tns:IUserManagerService_ManageUserSearchEngine_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/ManageUserSearchEngineQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_ManageUserSearchEngine_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearUserAddedSearchEngines">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/ClearUserAddedSearchEngines" message="tns:IUserManagerService_ClearUserAddedSearchEngines_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/ClearUserAddedSearchEnginesResponse" message="tns:IUserManagerService_ClearUserAddedSearchEngines_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/ClearUserAddedSearchEnginesQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_ClearUserAddedSearchEngines_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUsersByClinicBranchID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadUsersByClinicBranchID" message="tns:IUserManagerService_LoadUsersByClinicBranchID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadUsersByClinicBranchIDResponse" message="tns:IUserManagerService_LoadUsersByClinicBranchID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadUsersByClinicBranchIDQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadUsersByClinicBranchID_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/RegisterNewUser" message="tns:IUserManagerService_RegisterNewUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/RegisterNewUserResponse" message="tns:IUserManagerService_RegisterNewUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/RegisterNewUserQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_RegisterNewUser_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterationStaticData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/GetRegisterationStaticData" message="tns:IUserManagerService_GetRegisterationStaticData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/GetRegisterationStaticDataResponse" message="tns:IUserManagerService_GetRegisterationStaticData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/GetRegisterationStaticDataQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_GetRegisterationStaticData_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchAllergyTypeByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/SearchAllergyTypeByName" message="tns:IUserManagerService_SearchAllergyTypeByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/SearchAllergyTypeByNameResponse" message="tns:IUserManagerService_SearchAllergyTypeByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/SearchAllergyTypeByNameQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_SearchAllergyTypeByName_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchICDCodeByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/SearchICDCodeByCode" message="tns:IUserManagerService_SearchICDCodeByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/SearchICDCodeByCodeResponse" message="tns:IUserManagerService_SearchICDCodeByCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/SearchICDCodeByCodeQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_SearchICDCodeByCode_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientBasicProfileAndLangauge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientBasicProfileAndLangauge" message="tns:IUserManagerService_SavePatientBasicProfileAndLangauge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientBasicProfileAndLangaugeResponse" message="tns:IUserManagerService_SavePatientBasicProfileAndLangauge_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientBasicProfileAndLangaugeQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_SavePatientBasicProfileAndLangauge_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientGurantor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientGurantor" message="tns:IUserManagerService_SavePatientGurantor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientGurantorResponse" message="tns:IUserManagerService_SavePatientGurantor_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientGurantorQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_SavePatientGurantor_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientHealthInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientHealthInfo" message="tns:IUserManagerService_SavePatientHealthInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientHealthInfoResponse" message="tns:IUserManagerService_SavePatientHealthInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientHealthInfoQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_SavePatientHealthInfo_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientInsuranceInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientInsuranceInfo" message="tns:IUserManagerService_SavePatientInsuranceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientInsuranceInfoResponse" message="tns:IUserManagerService_SavePatientInsuranceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/SavePatientInsuranceInfoQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_SavePatientInsuranceInfo_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterBaseUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/RegisterBaseUser" message="tns:IUserManagerService_RegisterBaseUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/RegisterBaseUserResponse" message="tns:IUserManagerService_RegisterBaseUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/RegisterBaseUserQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_RegisterBaseUser_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManagePatientEmergencyContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/ManagePatientEmergencyContact" message="tns:IUserManagerService_ManagePatientEmergencyContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/ManagePatientEmergencyContactResponse" message="tns:IUserManagerService_ManagePatientEmergencyContact_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/ManagePatientEmergencyContactQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_ManagePatientEmergencyContact_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterationStaticDataByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/GetRegisterationStaticDataByType" message="tns:IUserManagerService_GetRegisterationStaticDataByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/GetRegisterationStaticDataByTypeResponse" message="tns:IUserManagerService_GetRegisterationStaticDataByType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/GetRegisterationStaticDataByTypeQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_GetRegisterationStaticDataByType_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPatientbyClinicIdAndSearchString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/SearchPatientbyClinicIdAndSearchString" message="tns:IUserManagerService_SearchPatientbyClinicIdAndSearchString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/SearchPatientbyClinicIdAndSearchStringResponse" message="tns:IUserManagerService_SearchPatientbyClinicIdAndSearchString_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/SearchPatientbyClinicIdAndSearchStringQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_SearchPatientbyClinicIdAndSearchString_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRecentPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/SaveRecentPatient" message="tns:IUserManagerService_SaveRecentPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/SaveRecentPatientResponse" message="tns:IUserManagerService_SaveRecentPatient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/SaveRecentPatientQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_SaveRecentPatient_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRecentPatientsByProviderIdAndBranchId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadRecentPatientsByProviderIdAndBranchId" message="tns:IUserManagerService_LoadRecentPatientsByProviderIdAndBranchId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadRecentPatientsByProviderIdAndBranchIdResponse" message="tns:IUserManagerService_LoadRecentPatientsByProviderIdAndBranchId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadRecentPatientsByProviderIdAndBranchIdQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadRecentPatientsByProviderIdAndBranchId_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientProfileSettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientProfileSettings" message="tns:IUserManagerService_LoadPatientProfileSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientProfileSettingsResponse" message="tns:IUserManagerService_LoadPatientProfileSettings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientProfileSettingsQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientProfileSettings_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientProfileSettingsBySection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientProfileSettingsBySection" message="tns:IUserManagerService_LoadPatientProfileSettingsBySection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientProfileSettingsBySectionResponse" message="tns:IUserManagerService_LoadPatientProfileSettingsBySection_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadPatientProfileSettingsBySectionQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadPatientProfileSettingsBySection_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManagePatientProfileSettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/ManagePatientProfileSettings" message="tns:IUserManagerService_ManagePatientProfileSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/ManagePatientProfileSettingsResponse" message="tns:IUserManagerService_ManagePatientProfileSettings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/ManagePatientProfileSettingsQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_ManagePatientProfileSettings_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadProfileStaticData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagerService/LoadProfileStaticData" message="tns:IUserManagerService_LoadProfileStaticData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagerService/LoadProfileStaticDataResponse" message="tns:IUserManagerService_LoadProfileStaticData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManagerService/LoadProfileStaticDataQuivusFaultFault" name="QuivusFaultFault" message="tns:IUserManagerService_LoadProfileStaticData_QuivusFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserManagerDebugService" type="tns:IUserManagerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadPatientAllergyInfoByPatientIdForCompleteProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientAllergyInfoByPatientIdForCompleteProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserEmail">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/VerifyUserEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DateTestService">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/DateTestService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadClinicBranchIdByClinicBranchName">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadClinicBranchIdByClinicBranchName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientAllergy">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/SavePatientAllergy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientCompleteProfileForClinic">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientCompleteProfileForClinic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserEmailByUserId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/GetUserEmailByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientProfileInfoForProvider">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientProfileInfoForProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientAllergiesForProvider">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientAllergiesForProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientDiagnosisForProvider">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientDiagnosisForProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientImmunizationForProvider">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientImmunizationForProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientMedicationForProvider">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientMedicationForProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientInsuranceForProvider">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientInsuranceForProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadImageTypes">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadImageTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartyGuidByProfileIdAndTypeId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/GetPartyGuidByProfileIdAndTypeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBasicInfoById">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/GetUserBasicInfoById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadModuleTypes">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadModuleTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IsProviderAtClinic">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/IsProviderAtClinic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartyGuidByPatientIdAndPartyTypeId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/GetPartyGuidByPatientIdAndPartyTypeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ManagePatient">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/ManagePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientByPatientId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientByPatientId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientBasicInfoByPatientId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientBasicInfoByPatientId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientUserInfoByQuivusId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientUserInfoByQuivusId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/VerifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadBaseUserByUserId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadBaseUserByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadQuivusIdByPatientId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadQuivusIdByPatientId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRcopiaIdByPatientId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadRcopiaIdByPatientId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePatientEPrescriptionDetails">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/UpdatePatientEPrescriptionDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadExternalPatients">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadExternalPatients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePatientRCopiaId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/UpdatePatientRCopiaId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllProviderByClinicBranchId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadAllProviderByClinicBranchId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientBaseUserInfoByPatientIdForCompleteProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientBaseUserInfoByPatientIdForCompleteProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PingService">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/PingService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LogLoginHistory">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LogLoginHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserDefaultQuickLinksbyLocation">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadUserDefaultQuickLinksbyLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserSearchEnginebyLocation">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadUserSearchEnginebyLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllSearchEngines">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadAllSearchEngines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetDefaultSearchEngine">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/SetDefaultSearchEngine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ManageUserSearchEngine">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/ManageUserSearchEngine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClearUserAddedSearchEngines">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/ClearUserAddedSearchEngines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUsersByClinicBranchID">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadUsersByClinicBranchID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/RegisterNewUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterationStaticData">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/GetRegisterationStaticData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAllergyTypeByName">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/SearchAllergyTypeByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchICDCodeByCode">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/SearchICDCodeByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientBasicProfileAndLangauge">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/SavePatientBasicProfileAndLangauge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientGurantor">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/SavePatientGurantor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientHealthInfo">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/SavePatientHealthInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientInsuranceInfo">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/SavePatientInsuranceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterBaseUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/RegisterBaseUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ManagePatientEmergencyContact">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/ManagePatientEmergencyContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterationStaticDataByType">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/GetRegisterationStaticDataByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPatientbyClinicIdAndSearchString">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/SearchPatientbyClinicIdAndSearchString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRecentPatient">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/SaveRecentPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRecentPatientsByProviderIdAndBranchId">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadRecentPatientsByProviderIdAndBranchId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientProfileSettings">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientProfileSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientProfileSettingsBySection">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadPatientProfileSettingsBySection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ManagePatientProfileSettings">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/ManagePatientProfileSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadProfileStaticData">
+      <soap:operation soapAction="http://tempuri.org/IUserManagerService/LoadProfileStaticData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="QuivusFaultFault">
+        <soap:fault use="literal" name="QuivusFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserManagerService">
+    <wsdl:port name="UserManagerDebugService" binding="tns:UserManagerDebugService">
+      <soap:address location="http://quivus.com/QuivusAirProduction/QUserService/Service/UserManagerService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

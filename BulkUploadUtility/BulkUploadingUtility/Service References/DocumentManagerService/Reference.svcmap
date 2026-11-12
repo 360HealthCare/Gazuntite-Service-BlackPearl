@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cef2149c-b22a-49c1-bb3d-56605d90d310" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DocumentManagerService.wsdl" MetadataType="Wsdl" ID="f70ff2f0-173a-493a-ac3d-4a7d782a939a" SourceId="1" SourceUrl="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?wsdl" />
+    <MetadataFile FileName="DocumentManagerService.xsd" MetadataType="Schema" ID="96189db7-3fc2-4586-9fba-ea9a1fc25b07" SourceId="1" SourceUrl="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DocumentManagerService1.xsd" MetadataType="Schema" ID="00339e71-fb8d-421b-bf79-1b8ca5707de4" SourceId="1" SourceUrl="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd5" />
+    <MetadataFile FileName="DocumentManagerService1.disco" MetadataType="Disco" ID="40f083cc-01d3-4f3c-9698-16df2e3a7814" SourceId="1" SourceUrl="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?disco" />
+    <MetadataFile FileName="DocumentManagerService2.xsd" MetadataType="Schema" ID="319f4776-67cf-4ed6-8ae7-21fbbf821e31" SourceId="1" SourceUrl="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DocumentManagerService3.xsd" MetadataType="Schema" ID="8032816d-c96f-42c0-a2d0-01cb084a3f97" SourceId="1" SourceUrl="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DocumentManagerService4.xsd" MetadataType="Schema" ID="cd64d137-6847-406f-b196-fb8b4e304142" SourceId="1" SourceUrl="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DocumentManagerService5.xsd" MetadataType="Schema" ID="20672a38-8858-4552-b8a4-83072bd137f1" SourceId="1" SourceUrl="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd6" />
+    <MetadataFile FileName="DocumentManagerService6.xsd" MetadataType="Schema" ID="74353a18-1c8a-4e0f-acbb-cb516ce5f031" SourceId="1" SourceUrl="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

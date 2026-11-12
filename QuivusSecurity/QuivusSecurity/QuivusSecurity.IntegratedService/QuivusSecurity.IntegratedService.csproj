@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{517A7865-FF68-4F0A-9CCC-53221D9BE6C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuivusSecurity.IntegratedService</RootNamespace>
+    <AssemblyName>QuivusSecurity.IntegratedService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\UserManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.AllergySearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.BaseUserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.ClinicDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.ClinicRoomDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.ClinicUserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.ContactSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.ExternalPatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.ICDCodeSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.ImageTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.LoginDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.ModuleTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientAllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientBasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientProfileAllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientProfileChronicMedicationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientProfileCompleteSettingDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientProfileDiagnosisDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientProfileDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientProfileImmuniztionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientProfileInsuranceDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientProfileTaggedDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientProviderAssociationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.PatientUserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.ProfileStaticDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.ProviderDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.ProviderSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.QuickLinkDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.RecentPatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.RegisterationStaticDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.SearchEngineDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.SpecialityTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.StationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.UserBasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.UserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.UserTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.UserVerificationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusSecurity.IntegratedService.UserManagerService.WorkingHourDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService.wsdl" />
+    <None Include="Service References\UserManagerService\UserManagerService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\UserManagerService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\UserManagerService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\UserManagerService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

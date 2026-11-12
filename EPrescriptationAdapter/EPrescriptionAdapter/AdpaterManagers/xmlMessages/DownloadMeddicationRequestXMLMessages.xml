@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<RCExtRequest>
+
+
+  <Request>
+    <Command>update_medication</Command>
+    <LastUpdateDate></LastUpdateDate>
+    <Patient>
+      <RcopiaID></RcopiaID>
+      <ExternalID></ExternalID>
+    </Patient>
+  </Request>
+</RCExtRequest>
+

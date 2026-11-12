@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<RCExtRequest>
+  <Caller>
+    <VendorName></VendorName>
+    <VendorPassword></VendorPassword>
+    <Application></Application>
+    <Version></Version>
+    <PracticeName></PracticeName>
+    <Station></Station>
+  </Caller>
+  <SystemName></SystemName>
+  <RcopiaPracticeUsername></RcopiaPracticeUsername>
+
+  <Request>
+    <Command>update_medication</Command>
+    <LastUpdateDate></LastUpdateDate>
+    <Patient>
+      <RcopiaID></RcopiaID>
+      <ExternalID></ExternalID>
+    </Patient>
+  </Request>
+</RCExtRequest>
+

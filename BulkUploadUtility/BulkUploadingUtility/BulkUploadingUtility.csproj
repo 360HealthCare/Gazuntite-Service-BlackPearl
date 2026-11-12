@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F61DEF99-EDA6-431D-ADB1-E9EEC773F987}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BulkUploadingUtility</RootNamespace>
+    <AssemblyName>BulkUploadingUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\utilitydeployment\ProducationBuilt\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B630D23FC2AF41632314D06BA09F56F04D1FB5E3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BulkUploadingUtility_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaskScheduler, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TaskScheduler.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\BulkUploadController.cs" />
+    <Compile Include="BL\FolderCreationController.cs" />
+    <Compile Include="BL\SchedularController.cs" />
+    <Compile Include="Model\Document.cs" />
+    <Compile Include="Model\PatSearch.cs" />
+    <Compile Include="Model\Response\CreateFolderReponse.cs" />
+    <Compile Include="Model\Session.cs" />
+    <Compile Include="Model\UploadedDocument.cs" />
+    <Compile Include="Model\UtilityBase.cs" />
+    <Compile Include="Model\UtilityTask.cs" />
+    <Compile Include="Model\UtilityTrigger.cs" />
+    <Compile Include="Model\UploadedFileInfo.cs" />
+    <Compile Include="PopUp\MessagePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\MessagePopup.Designer.cs">
+      <DependentUpon>MessagePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\DocumentManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\BulkDocumentUploader.cs" />
+    <Compile Include="Utility\DirectoryOperation.cs" />
+    <Compile Include="Utility\ServiceOperator.cs" />
+    <Compile Include="Utility\UConfigurationManager.cs" />
+    <Compile Include="Utility\Contants.cs" />
+    <EmbeddedResource Include="PopUp\MessagePopup.resx">
+      <DependentUpon>MessagePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UIForms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BulkUploadingUtility_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\DocumentManagerService\BulkUploadingUtility.DocumentManagerService.DocumentSectionTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DocumentManagerService\BulkUploadingUtility.DocumentManagerService.DocumentTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DocumentManagerService\BulkUploadingUtility.DocumentManagerService.LiveProviderBaseDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DocumentManagerService\DocumentManagerService.wsdl" />
+    <None Include="Service References\DocumentManagerService\DocumentManagerService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DocumentManagerService\DocumentManagerService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DocumentManagerService\DocumentManagerService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DocumentManagerService\DocumentManagerService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DocumentManagerService\DocumentManagerService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DocumentManagerService\DocumentManagerService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DocumentManagerService\DocumentManagerService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.AllergySearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.BaseUserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.ContactSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.ExternalPatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.ICDCodeSearchDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.ImageTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.LoginDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.ModuleTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientAllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientBasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientProfileAllergyDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientProfileChronicMedicationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientProfileCompleteSettingDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientProfileDiagnosisDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientProfileDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientProfileImmuniztionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientProfileInsuranceDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientProfileTaggedDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.PatientUserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.ProfileStaticDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.ProviderDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.QuickLinkDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.RecentPatientDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.RegisterationStaticDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.SearchEngineDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.UserBasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.UserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\BulkUploadingUtility.UserManagerService.UserVerificationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.AddressBook.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.Clinic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.Image.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.Insurance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.PatientProfileCustomization.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.QuickLink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.RecentPatient.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.Search.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.SearchEngine.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.TypeDTOs.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.User.Patient.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.User.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\Quivus.Utility.Fault.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusModel.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusModel.User.Patient.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\QuivusModel.User.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\service.wsdl" />
+    <None Include="Service References\UserManagerService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagerService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DocumentManagerService\" />
+    <WCFMetadataStorage Include="Service References\UserManagerService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DocumentManagerService\BulkUploadingUtility.DocumentManagerService.PaggingResponseDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DocumentManagerService\BulkUploadingUtility.DocumentManagerService.SearchFieldTypeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DocumentManagerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DocumentManagerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DocumentManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DocumentManagerService\DocumentManagerService1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

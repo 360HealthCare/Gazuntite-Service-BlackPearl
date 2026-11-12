@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<RCExtRequest>
+  <Caller>
+    <VendorName>qvendor1</VendorName>
+    <VendorPassword></VendorPassword>
+    <PracticeName>Quivus</PracticeName>
+    <Application>Quivus</Application>
+    <Version>1</Version>
+    <Station>Station A</Station>
+  </Caller>
+  <RcopiaPracticeUsername>qu9898</RcopiaPracticeUsername>
+  <Request>
+    <Command>get_url</Command>
+  </Request>
+</RCExtRequest>

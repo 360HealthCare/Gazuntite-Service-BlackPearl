@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCFD8D6D-F31E-45CE-BCCF-7E4D486AB8D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdpaterManagers</RootNamespace>
+    <AssemblyName>AdpaterManagers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ANSManager.cs" />
+    <Compile Include="Interfaces\IManager.cs" />
+    <Compile Include="MessageBuilder\ANSCallBuilder.cs" />
+    <Compile Include="MessageBuilder\Message.cs" />
+    <Compile Include="MessageBuilder\MessageBuilder.cs" />
+    <Compile Include="MessageBuilder\MessageDirector.cs" />
+    <Compile Include="MessageParser\ANSCallParser.cs" />
+    <Compile Include="PatientManager.cs" />
+    <Compile Include="SSO\SingleSignonManger.cs" />
+    <Compile Include="PartnerAuthenticationManger.cs" />
+    <Compile Include="URLCacheManager.cs" />
+    <Compile Include="MessageManager.cs" />
+    <Compile Include="EventLogManager.cs" />
+    <Compile Include="LogManager.cs" />
+    <Compile Include="SecurityManager.cs" />
+    <Compile Include="ErrorCodeManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DataORM\DataORM.csproj">
+      <Project>{6AE81ADB-3496-43CA-BE75-F4ACDDC29B81}</Project>
+      <Name>DataORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPrescriptionAdapter.Common.DTOs\EPrescriptionAdapter.Common.DTOs.csproj">
+      <Project>{1996E672-CAD9-4CF3-880E-F89BDB0361F0}</Project>
+      <Name>EPrescriptionAdapter.Common.DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPrescriptionAdapter.Utility\EPrescriptionAdapter.Utility.csproj">
+      <Project>{0C5CAE12-7500-417D-B0D2-71D51B9C9DBB}</Project>
+      <Name>EPrescriptionAdapter.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="xmlMessages\AllergyGroupRequestXMLMessage.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xmlMessages\CallerNode.xml" />
+    <Content Include="xmlMessages\GetNotificationsXMMessage.xml" />
+    <Content Include="xmlMessages\DownloadMeddicationRequestXMLMessages.xml" />
+    <Content Include="xmlMessages\DownloadPrescriptionRequestXMLMessage.xml" />
+    <Content Include="xmlMessages\DownloadAllergiesReqestXMLMessages.xml" />
+    <Content Include="xmlMessages\DownloadProblemsRequestXMLMessage.xml" />
+    <Content Include="xmlMessages\GetURLRequestXMLMessage.xml" />
+    <Content Include="xmlMessages\GetURLResult.xml" />
+    <Content Include="xmlMessages\UploadProblemsReqeustXMLMessage.xml" />
+    <Content Include="xmlMessages\UploadPatientRequestXMLMessage.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

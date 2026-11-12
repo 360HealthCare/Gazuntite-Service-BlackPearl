@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.PMH" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.PMH" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="PMHDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput" minOccurs="0" name="Allergy" nillable="true" type="q2:ArrayOfAllergyDTO" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput" minOccurs="0" name="ChiefComplaint" nillable="true" type="q3:ArrayOfChiefComplaintDTO" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput" minOccurs="0" name="ChronicDiagnosis" nillable="true" type="q4:ArrayOfChronicDiagnosisDTO" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput" minOccurs="0" name="ChronicMedication" nillable="true" type="q5:ArrayOfMedicationPrescribedDTO" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory" minOccurs="0" name="ComprehensiveHistory" nillable="true" type="q6:ComprehensiveHistoryDTO" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput" minOccurs="0" name="Immunization" nillable="true" type="q7:ArrayOfImmunizationDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PMHDTO" nillable="true" type="tns:PMHDTO" />
+</xs:schema>

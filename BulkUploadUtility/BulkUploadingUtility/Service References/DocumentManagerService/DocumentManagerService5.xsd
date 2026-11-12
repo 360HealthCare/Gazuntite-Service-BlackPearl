@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LiveProvider.Model.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LiveProvider.Model.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LiveProvider.Model.TypeDTOs.DocumentManager" />
+  <xs:complexType name="PaggingResponseDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FirstRecord" type="xs:int" />
+      <xs:element minOccurs="0" name="LastRecord" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LiveProvider.Model.TypeDTOs.DocumentManager" minOccurs="0" name="PatientDocumentsList" nillable="true" type="q1:ArrayOfPatientDocumentDTO" />
+      <xs:element minOccurs="0" name="TotalRecord" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaggingResponseDTO" nillable="true" type="tns:PaggingResponseDTO" />
+</xs:schema>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DocumentManagerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LiveProvider.Model" />
+      <xsd:import schemaLocation="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" />
+      <xsd:import schemaLocation="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LiveProvider.Model.TypeDTOs.DocumentManager" />
+      <xsd:import schemaLocation="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/LiveProvider.Model.Response" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocumentManagerService_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_PingCustomObject_InputMessage">
+    <wsdl:part name="parameters" element="tns:PingCustomObject" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_PingCustomObject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingCustomObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_UpdateCustomObject_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomObject" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_UpdateCustomObject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadDocumentTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDocumentTypes" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadDocumentTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDocumentTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadDocumentTypes_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q1:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadDocumentSectionTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDocumentSectionTypes" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadDocumentSectionTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDocumentSectionTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadDocumentSectionTypes_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q2:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_ManagePatientDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePatientDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_ManagePatientDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePatientDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_ManagePatientDocuments_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q3:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_ManageLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManageLog" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_ManageLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManageLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_ManageLog_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q4:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_UpdateServerFilePath_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServerFilePath" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_UpdateServerFilePath_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServerFilePathResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_UpdateServerFilePath_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q5:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadPatientDocumentByClinicIdAndPatientID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientDocumentByClinicIdAndPatientID" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadPatientDocumentByClinicIdAndPatientID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPatientDocumentByClinicIdAndPatientIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadPatientDocumentByClinicIdAndPatientID_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q6:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadSearchField_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadSearchField" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadSearchField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadSearchFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagerService_LoadSearchField_LiveProviderFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/LiveProvider.Utility.Fault" name="detail" element="q7:LiveProviderFault" />
+  </wsdl:message>
+  <wsdl:portType name="IDocumentManagerService">
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentManagerService/Ping" message="tns:IDocumentManagerService_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentManagerService/PingResponse" message="tns:IDocumentManagerService_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PingCustomObject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentManagerService/PingCustomObject" message="tns:IDocumentManagerService_PingCustomObject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentManagerService/PingCustomObjectResponse" message="tns:IDocumentManagerService_PingCustomObject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomObject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentManagerService/UpdateCustomObject" message="tns:IDocumentManagerService_UpdateCustomObject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentManagerService/UpdateCustomObjectResponse" message="tns:IDocumentManagerService_UpdateCustomObject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDocumentTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadDocumentTypes" message="tns:IDocumentManagerService_LoadDocumentTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadDocumentTypesResponse" message="tns:IDocumentManagerService_LoadDocumentTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadDocumentTypesLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IDocumentManagerService_LoadDocumentTypes_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDocumentSectionTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadDocumentSectionTypes" message="tns:IDocumentManagerService_LoadDocumentSectionTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadDocumentSectionTypesResponse" message="tns:IDocumentManagerService_LoadDocumentSectionTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadDocumentSectionTypesLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IDocumentManagerService_LoadDocumentSectionTypes_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManagePatientDocuments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentManagerService/ManagePatientDocuments" message="tns:IDocumentManagerService_ManagePatientDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentManagerService/ManagePatientDocumentsResponse" message="tns:IDocumentManagerService_ManagePatientDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDocumentManagerService/ManagePatientDocumentsLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IDocumentManagerService_ManagePatientDocuments_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManageLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentManagerService/ManageLog" message="tns:IDocumentManagerService_ManageLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentManagerService/ManageLogResponse" message="tns:IDocumentManagerService_ManageLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDocumentManagerService/ManageLogLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IDocumentManagerService_ManageLog_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerFilePath">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentManagerService/UpdateServerFilePath" message="tns:IDocumentManagerService_UpdateServerFilePath_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentManagerService/UpdateServerFilePathResponse" message="tns:IDocumentManagerService_UpdateServerFilePath_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDocumentManagerService/UpdateServerFilePathLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IDocumentManagerService_UpdateServerFilePath_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientDocumentByClinicIdAndPatientID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadPatientDocumentByClinicIdAndPatientID" message="tns:IDocumentManagerService_LoadPatientDocumentByClinicIdAndPatientID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadPatientDocumentByClinicIdAndPatientIDResponse" message="tns:IDocumentManagerService_LoadPatientDocumentByClinicIdAndPatientID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadPatientDocumentByClinicIdAndPatientIDLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IDocumentManagerService_LoadPatientDocumentByClinicIdAndPatientID_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSearchField">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadSearchField" message="tns:IDocumentManagerService_LoadSearchField_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadSearchFieldResponse" message="tns:IDocumentManagerService_LoadSearchField_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDocumentManagerService/LoadSearchFieldLiveProviderFaultFault" name="LiveProviderFaultFault" message="tns:IDocumentManagerService_LoadSearchField_LiveProviderFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDocumentManagerService" type="tns:IDocumentManagerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagerService/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PingCustomObject">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagerService/PingCustomObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomObject">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagerService/UpdateCustomObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDocumentTypes">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagerService/LoadDocumentTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDocumentSectionTypes">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagerService/LoadDocumentSectionTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ManagePatientDocuments">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagerService/ManagePatientDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ManageLog">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagerService/ManageLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerFilePath">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagerService/UpdateServerFilePath" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatientDocumentByClinicIdAndPatientID">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagerService/LoadPatientDocumentByClinicIdAndPatientID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSearchField">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagerService/LoadSearchField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LiveProviderFaultFault">
+        <soap:fault use="literal" name="LiveProviderFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocumentManagerService">
+    <wsdl:port name="BasicHttpBinding_IDocumentManagerService" binding="tns:BasicHttpBinding_IDocumentManagerService">
+      <soap:address location="http://host.quivus.com/QuivusAirProduction/QLiveProvider/DocumentManager/Service/DocumentManagerService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

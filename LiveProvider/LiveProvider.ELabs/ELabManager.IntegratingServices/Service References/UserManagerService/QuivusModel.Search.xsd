@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/QuivusModel.Search" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/QuivusModel.Search" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.Search" />
+  <xs:complexType name="ClinicProviderSearchDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model.Search" base="q1:ContactSearchDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DAE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EIN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FederalTaxId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImageData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="LicenseNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NPI" type="xs:int" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecGuid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SSN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TPI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPIN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkDays" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkEnd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkStart" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClinicProviderSearchDTO" nillable="true" type="tns:ClinicProviderSearchDTO" />
+</xs:schema>

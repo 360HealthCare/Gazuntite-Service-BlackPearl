@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" CodeBehind="DocumentManagementRestfulService.svc.cs"  
+Service="LiveProvider.DocumentManager.Service.RestFulService.DocumentManagementRestfulService" 
+Factory="System.ServiceModel.Activation.WebServiceHostFactory"
+%>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory.Family" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory.Medical" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd25" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory.Social" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="ComprehensiveHistoryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory.Family" minOccurs="0" name="FamilyHistory" nillable="true" type="q2:ArrayOfFamilyHistoryDTO" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory.Medical" minOccurs="0" name="MedicalHistory" nillable="true" type="q3:ArrayOfMedicalHistoryDTO" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.ComprehensiveHistory.Social" minOccurs="0" name="SocialHistory" nillable="true" type="q4:ArrayOfSocialHistoryDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ComprehensiveHistoryDTO" nillable="true" type="tns:ComprehensiveHistoryDTO" />
+</xs:schema>

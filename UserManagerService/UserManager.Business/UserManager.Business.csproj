@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{932C6E44-14FE-4F66-BE04-12B7567A8254}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UserManager.Business</RootNamespace>
+    <AssemblyName>UserManager.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Allergy\IAllergyManager.cs" />
+    <Compile Include="Allergy\Impl\AllergyManagerImpl.cs" />
+    <Compile Include="Authentication\IAuthenticationManager.cs" />
+    <Compile Include="Authentication\Impl\AuthenticationManagerImpl.cs" />
+    <Compile Include="Common\StaticDataManager.cs" />
+    <Compile Include="Common\UserManager.cs" />
+    <Compile Include="ContactSearch\IContactSearchManager.cs" />
+    <Compile Include="ContactSearch\Impl\ContactSearchManagerImpl.cs" />
+    <Compile Include="EmailManager\IEmailManager.cs" />
+    <Compile Include="EmailManager\Impl\EmailManagerImpl.cs" />
+    <Compile Include="ICDCode\IICDCodeManager.cs" />
+    <Compile Include="ICDCode\Impl\ICDCodeManagerImpl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickLink\Impl\QuickLinkManagerImpl.cs" />
+    <Compile Include="QuickLink\IQuickLinkManager.cs" />
+    <Compile Include="Registration\Impl\QuivusRegistartionManagerImpl.cs" />
+    <Compile Include="Registration\IQuivusRegistartionManager.cs" />
+    <Compile Include="SearchEngine\Impl\SearchEngineManagerImpl.cs" />
+    <Compile Include="SearchEngine\ISearchEngineManager.cs" />
+    <Compile Include="User\Impl\UserManagerImpl.cs" />
+    <Compile Include="User\IUserManager.cs" />
+    <Compile Include="User\Patient\Impl\PatientManagerImpl.cs" />
+    <Compile Include="User\Patient\IPatientManager.cs" />
+    <Compile Include="User\Patient\PatientRegistration\Impl\PatientRegistrationManagerImpl.cs" />
+    <Compile Include="User\Patient\PatientRegistration\IPatientRegistrationManager.cs" />
+    <Compile Include="Utility\CopyUtil.cs" />
+    <Compile Include="Utility\ListSeprationUtility.cs" />
+    <Compile Include="Utility\ResponseErrorHandler.cs" />
+    <Compile Include="Validators\QAddressBookValidator.cs" />
+    <Compile Include="Validators\QPatientValidator.cs" />
+    <Compile Include="Validators\QRegistrationValidator.cs" />
+    <Compile Include="Validators\QUserValidator.cs" />
+    <Compile Include="Validators\QValidator.cs" />
+    <Compile Include="Validators\Validations.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\QuivusModel\QuivusModel\QuivusModel.csproj">
+      <Project>{4FB08438-241D-4F0F-B826-A6ACC43CB5FF}</Project>
+      <Name>QuivusModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\QuivusUtility\QuivusUtility\QuivusUtility.csproj">
+      <Project>{52A05B07-376A-4756-A2CC-CCFC7A387226}</Project>
+      <Name>QuivusUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserManager.DataAccess\UserManager.DataAccess.csproj">
+      <Project>{4A8A9BE8-E962-4DE4-B95E-E5650C36D5DB}</Project>
+      <Name>UserManager.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Quivus.Model.AddressBook.AddressBookDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.AddressBook.CityDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.AddressBook.PhoneDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.AddressBook.ZipCodeDTO.datasource" />
+    <None Include="Properties\DataSources\Quivus.Model.Common.AddressBookStaticDataDTO.datasource" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

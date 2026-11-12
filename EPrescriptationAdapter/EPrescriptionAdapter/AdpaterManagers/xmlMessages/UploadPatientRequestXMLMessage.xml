@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RCExtRequest>
+    
+
+    <Request>
+        <Command>send_patient</Command>
+        <Synchronous>y</Synchronous>
+        <CheckEligibility>y</CheckEligibility>
+        <PatientList>
+		            <Patient>
+							<ExternalID></ExternalID>
+							<FirstName></FirstName>
+							<LastName></LastName>
+							<DOB></DOB>
+							<Sex></Sex>
+							<HomePhone></HomePhone>
+							<Address1></Address1>
+							<Address2></Address2>
+							<City></City>
+							<State></State>
+							<Zip></Zip>
+							<SSN></SSN>
+		            </Patient>
+		        
+            </PatientList>
+    </Request>
+</RCExtRequest>
+
+

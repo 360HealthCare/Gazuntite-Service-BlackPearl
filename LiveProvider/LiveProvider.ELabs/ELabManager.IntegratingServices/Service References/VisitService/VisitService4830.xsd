@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.Assessment" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Dictation" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Notes" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.PMH" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.Physical" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd33" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model.Visit" />
+  <xs:import schemaLocation="http://192.168.0.63:82/QVisitService/Service/VisitService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Quivus.Model" />
+  <xs:complexType name="QuickInputDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Quivus.Model" base="q1:QuivusBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionDate" type="xs:dateTime" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.Assessment" minOccurs="0" name="Assessment" nillable="true" type="q2:AssessmentDTO" />
+          <xs:element minOccurs="0" name="ClinicBranchId" type="xs:int" />
+          <xs:element minOccurs="0" name="IsSigned" type="xs:boolean" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Dictation" minOccurs="0" name="ModuleDictations" nillable="true" type="q3:ArrayOfModuleDictationDTO" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.Notes" minOccurs="0" name="ModuleNotes" nillable="true" type="q4:ArrayOfModuleNoteDTO" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.PMH" minOccurs="0" name="PMH" nillable="true" type="q5:PMHDTO" />
+          <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Quivus.Model.QuickInput.MainQuickInput.Physical" minOccurs="0" name="Physical" nillable="true" type="q6:PhysicalDTO" />
+          <xs:element minOccurs="0" name="SignedByUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="SignedByUserTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="SignedDate" type="xs:dateTime" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Quivus.Model.Visit" minOccurs="0" name="Visit" nillable="true" type="q7:VisitDTO" />
+          <xs:element minOccurs="0" name="VisitId" type="xs:int" />
+          <xs:element minOccurs="0" name="isReviewed" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QuickInputDTO" nillable="true" type="tns:QuickInputDTO" />
+</xs:schema>
