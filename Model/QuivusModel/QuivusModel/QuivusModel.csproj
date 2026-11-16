@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuivusModel</RootNamespace>
     <AssemblyName>QuivusModel</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -56,6 +59,49 @@
     <Compile Include="AddressBook\StateDTO.cs" />
     <Compile Include="AddressBook\ZipCodeDTO.cs" />
     <Compile Include="Association\PatientProviderAssociationDTO.cs" />
+    <Compile Include="Billing\Claim\ClaimAdjustmentDTO.cs" />
+    <Compile Include="Billing\Claim\ClaimBillingStatusDTO.cs" />
+    <Compile Include="Billing\Claim\ClaimDTO.cs" />
+    <Compile Include="Billing\Claim\ClaimInsuranceDTO.cs" />
+    <Compile Include="Billing\Claim\ClaimPaymentsDTO.cs" />
+    <Compile Include="Billing\Claim\ClaimSearchDTO.cs" />
+    <Compile Include="Billing\Claim\ClaimSearchResultDTO.cs" />
+    <Compile Include="Billing\Claim\ClaimSubmissionBatchDTO.cs" />
+    <Compile Include="Billing\Claim\ClaimTransactionDTO.cs" />
+    <Compile Include="Billing\Claim\ClaimTransactionSearchResultDTO.cs" />
+    <Compile Include="Billing\EDICommon\BHTControlNumberDTO.cs" />
+    <Compile Include="Billing\EDICommon\GSControlNumberDTO.cs" />
+    <Compile Include="Billing\EDICommon\ISAControlNumberDTO.cs" />
+    <Compile Include="Billing\EDICommon\STControlNumberDTO.cs" />
+    <Compile Include="Billing\EDIPaymentTransaction\AdjustmentMappingDTO.cs" />
+    <Compile Include="Billing\EDIPaymentTransaction\AdjustmentReasonCodeDTO.cs" />
+    <Compile Include="Billing\PendingBills\CMS1500QuestionsDTO.cs" />
+    <Compile Include="Billing\PendingBills\CPTMedicalTypeResultDTO.cs" />
+    <Compile Include="Billing\PendingBills\EncounterTypeResultDTO.cs" />
+    <Compile Include="Billing\PendingBills\ENMCodeTypeResultDTO.cs" />
+    <Compile Include="Billing\PendingBills\FrequencyCodeTypeResultDTO.cs" />
+    <Compile Include="Billing\PendingBills\ICDCodeResultDTO.cs" />
+    <Compile Include="Billing\PendingBills\PendingBillsDTO.cs" />
+    <Compile Include="Billing\PendingBills\PendingBillsResultDTO.cs" />
+    <Compile Include="Billing\PendingBills\PendingBillsSearchDTO.cs" />
+    <Compile Include="Billing\PendingBills\PlaceOfServiceResultDTO.cs" />
+    <Compile Include="Billing\PendingBills\ProcedureModifierTypeResultDTO.cs" />
+    <Compile Include="Billing\PendingBills\SuperBillDiagnosisDTO.cs" />
+    <Compile Include="Billing\PendingBills\SuperBillENMServiceDTO.cs" />
+    <Compile Include="Billing\PendingBills\SuperBillHEDLevelDTO.cs" />
+    <Compile Include="Billing\PendingBills\SuperBillPatientInfoDTO.cs" />
+    <Compile Include="Billing\PendingBills\SuperBillPatientInsuranceDTO.cs" />
+    <Compile Include="Billing\PendingBills\SuperBillProcedureDTO.cs" />
+    <Compile Include="Billing\PendingBills\SuperBillWorkRelatedServicesDTO.cs" />
+    <Compile Include="Billing\PendingBills\WRSResultDTO.cs" />
+    <Compile Include="Billing\User\PatientQuivusIDDTO.cs" />
+    <Compile Include="Billing\Visit\PatientProcedureModifierDTO.cs" />
+    <Compile Include="Billing\Visit\ProcedureModifierTypeDTO.cs" />
+    <Compile Include="Billing\Visit\QBCPTMedicalTypeDTO.cs" />
+    <Compile Include="Billing\Visit\QBEncounterTypeDTO.cs" />
+    <Compile Include="Billing\Visit\QBICDCodeDTO.cs" />
+    <Compile Include="Billing\Visit\QBProcedureDTO.cs" />
+    <Compile Include="Billing\Visit\QBVisitDTO.cs" />
     <Compile Include="Clinic\ClinicBranchDTO.cs" />
     <Compile Include="Clinic\ClinicDTO.cs" />
     <Compile Include="Common\AddressBookStaticDataDTO.cs" />
@@ -141,6 +187,33 @@
     <Compile Include="Search\ContactSearchDTO.cs" />
     <Compile Include="Search\PatientSearchDTO.cs" />
     <Compile Include="Search\PatientSearchResultDTO.cs" />
+    <Compile Include="Security\AccessRightDTO.cs" />
+    <Compile Include="Security\AppDTO\BaseDTO\ModuleARBaseDTO.cs" />
+    <Compile Include="Security\AppDTO\CommunicationDTO.cs" />
+    <Compile Include="Security\AppDTO\ImportDocumentDTO.cs" />
+    <Compile Include="Security\AppDTO\MostRecentPatientDTO.cs" />
+    <Compile Include="Security\AppDTO\NotesDTO.cs" />
+    <Compile Include="Security\AppDTO\PatientProfileDTO.cs" />
+    <Compile Include="Security\AppDTO\PrescriptionDTO.cs" />
+    <Compile Include="Security\AppDTO\ProfileDTO.cs" />
+    <Compile Include="Security\AppDTO\QI\Assesment\QIAssesmentDTO.cs" />
+    <Compile Include="Security\AppDTO\QI\Physical\QIPhysicalDTO.cs" />
+    <Compile Include="Security\AppDTO\QI\PMH\QIAllergyDTO.cs" />
+    <Compile Include="Security\AppDTO\QI\PMH\QIPMHDTO.cs" />
+    <Compile Include="Security\AppDTO\QI\QIDTO.cs" />
+    <Compile Include="Security\AppDTO\QLinkDTO.cs" />
+    <Compile Include="Security\AppDTO\SearchPatientDTO.cs" />
+    <Compile Include="Security\AppDTO\VBDTO\Assesment\VBAssesmentDTO.cs" />
+    <Compile Include="Security\AppDTO\VBDTO\CreateVisitDTO.cs" />
+    <Compile Include="Security\AppDTO\VBDTO\DocumentListDTO.cs" />
+    <Compile Include="Security\AppDTO\VBDTO\EncounterListDTO.cs" />
+    <Compile Include="Security\AppDTO\VBDTO\LoadHistoryDTO.cs" />
+    <Compile Include="Security\AppDTO\VBDTO\Physical\VBPhysicalDTO.cs" />
+    <Compile Include="Security\AppDTO\VBDTO\PMH\VBAllergyDTO.cs" />
+    <Compile Include="Security\AppDTO\VBDTO\PMH\VBPMHDTO.cs" />
+    <Compile Include="Security\AppDTO\VBDTO\ViewBackgroundDTO.cs" />
+    <Compile Include="Security\AppDTO\WebSearchDTO.cs" />
+    <Compile Include="Security\AppModuleDTO.cs" />
     <Compile Include="TypeDTOs\AllergyTypeDTO.cs" />
     <Compile Include="TypeDTOs\DiseaseTypeDTO.cs" />
     <Compile Include="TypeDTOs\EncounterTypeDTO.cs" />
